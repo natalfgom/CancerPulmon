@@ -2,6 +2,6 @@
 package acme.roles;
 
 public enum Genero {
-	Musculino, Femenino, Otro
+	Masculino, Femenino, Otro
 
 }
