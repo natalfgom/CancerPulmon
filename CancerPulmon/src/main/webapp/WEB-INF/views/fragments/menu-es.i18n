@@ -54,3 +54,6 @@ master.menu.authenticated = Listas
 
 #Tratamientos
 master.menu.authenticated.tratamiento.list = Lista Tratamientos
+
+#Tratamiento
+master.menu.authenticated.donante.list =  Donantes Disponibles

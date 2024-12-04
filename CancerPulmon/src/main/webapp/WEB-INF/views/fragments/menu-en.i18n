@@ -53,5 +53,9 @@ master.menu.authenticated.paciente.list = List Patient
 master.menu.authenticated = Lists
 
 #Tratamiento
-master.menu.authenticated.tratamiento.list = List Treatment
+master.menu.authenticated.tratamiento.list =  Treatment List
+master.menu.authenticated = Lists
+
+#Tratamiento
+master.menu.authenticated.donante.list =  Donor List
 master.menu.authenticated = Lists

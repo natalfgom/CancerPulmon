@@ -25,6 +25,7 @@
 		<acme:menu-option code="master.menu.authenticated" access="isAuthenticated()">
     		<acme:menu-suboption code="master.menu.authenticated.paciente.list" action="/authenticated/paciente/list"/>
     		<acme:menu-suboption code="master.menu.authenticated.tratamiento.list" action="/authenticated/tratamiento/list"/>
+    		<acme:menu-suboption code="master.menu.authenticated.donante.list" action="/authenticated/donante/list"/>
     		<!--<acme:menu-separator/>
     		<acme:menu-suboption code="master.menu.authenticated.money-exchange" action="/authenticated/money-exchange/perform"/> -->
     		<!--<acme:menu-separator/>

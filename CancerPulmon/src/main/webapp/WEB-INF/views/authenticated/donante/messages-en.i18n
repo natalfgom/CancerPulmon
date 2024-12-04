@@ -1,0 +1,7 @@
+authenticated.donante.list.label.nhusa = nhusa
+authenticated.donante.list.label.nombre = name
+authenticated.donante.list.label.apellidos = surname
+
+authenticated.donante.form.label.nhusa = nhusa
+authenticated.donante.form.label.nombre = name
+authenticated.donante.form.label.apellidos = surname
