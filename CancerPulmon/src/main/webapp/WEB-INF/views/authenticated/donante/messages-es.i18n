@@ -1,7 +1,11 @@
-authenticated.donante.list.label.nhusa = nhusa
-authenticated.donante.list.label.nombre = nombre
-authenticated.donante.list.label.apellidos = apellidos
+authenticated.donante.list.label.nhusa = NHUSA
+authenticated.donante.list.label.nombre = Nombre
+authenticated.donante.list.label.apellidos = Apellidos
 
-authenticated.donante.form.label.nhusa = nhusa
-authenticated.donante.form.label.nombre = nombre
-authenticated.donante.form.label.apellidos = apellidos
+authenticated.donante.form.label.nhusa = NHUSA
+authenticated.donante.form.label.nombre = Nombre
+authenticated.donante.form.label.apellidos = Apellidos
+authenticated.donante.form.label.grupoSanguineo = Grupo Sanguineo
+authenticated.donante.form.label.organoDisponible = Órgano Disponible
+authenticated.donante.form.label.volumenPulmonar = Volumen Pulmonar
+authenticated.donante.form.label.fechaExtraccion = Fecha Extraccion
