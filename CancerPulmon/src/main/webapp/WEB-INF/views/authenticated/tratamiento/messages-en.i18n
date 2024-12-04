@@ -1,0 +1,5 @@
+authenticated.tratamiento.list.label.tipoTratamiento = Type
+authenticated.tratamiento.list.label.estadoTratamiento = State
+
+authenticated.tratamiento.form.label.tipoTratamiento = Type
+authenticated.tratamiento.form.label.estadoTratamiento = Estado
