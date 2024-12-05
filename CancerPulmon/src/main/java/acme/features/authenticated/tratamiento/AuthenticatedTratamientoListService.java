@@ -35,7 +35,7 @@ public class AuthenticatedTratamientoListService extends AbstractService<Authent
 	public void load() {
 		Collection<Tratamiento> objects;
 
-		objects = this.repository.findTratamientos();
+		objects = this.repository.findAllTratamientosWithPaciente();
 
 		super.getBuffer().setData(objects);
 	}
@@ -47,6 +47,11 @@ public class AuthenticatedTratamientoListService extends AbstractService<Authent
 		Tuple tuple;
 
 		tuple = super.unbind(object, "tipoTratamiento", "estadoTratamiento");
+
+		if (object.getPaciente() != null)
+			tuple.put("nuhsa", object.getPaciente().getNuhsa());
+		else
+			tuple.put("nuhsa", "No disponible");
 
 		super.getResponse().setData(tuple);
 	}

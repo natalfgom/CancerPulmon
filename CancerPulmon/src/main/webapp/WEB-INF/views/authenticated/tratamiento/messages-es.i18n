@@ -1,5 +1,12 @@
 authenticated.tratamiento.list.label.tipoTratamiento = Tipo 
 authenticated.tratamiento.list.label.estadoTratamiento = Estado
+authenticated.tratamiento.list.label.paciente.nuhsa = NHUSA
 
 authenticated.tratamiento.form.label.tipoTratamiento = Tipo
 authenticated.tratamiento.form.label.estadoTratamiento = Estado
+authenticated.tratamiento.form.label.paciente.nuhsa  = NHUSA
+authenticated.tratamiento.form.label.paciente.name = Nombre
+authenticated.tratamiento.form.label.paciente.surname = Apellidos
+authenticated.tratamiento.form.label.paciente.genero = Género
+authenticated.tratamiento.form.label.paciente.fechaNacimiento = Fecha Nacimiento
+authenticated.tratamiento.form.label.paciente.grupoSanguineo = Grupo Sanguíneo

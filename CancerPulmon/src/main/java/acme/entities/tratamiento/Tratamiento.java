@@ -38,4 +38,9 @@ public class Tratamiento extends AbstractEntity {
 	@Valid
 	@ManyToOne(optional = false)
 	protected Paciente			paciente; //Con la entidad paciente
+
+
+	public Paciente getPaciente() {
+		return this.paciente;
+	}
 }
