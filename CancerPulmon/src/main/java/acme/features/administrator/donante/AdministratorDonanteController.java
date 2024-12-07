@@ -1,5 +1,5 @@
 
-package acme.features.authenticated.donante;
+package acme.features.administrator.donante;
 
 import javax.annotation.PostConstruct;
 
@@ -7,19 +7,22 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
 import acme.entities.donante.Donante;
-import acme.framework.components.accounts.Authenticated;
+import acme.framework.components.accounts.Administrator;
 import acme.framework.controllers.AbstractController;
 
 @Controller
-public class AuthenticatedDonanteController extends AbstractController<Authenticated, Donante> {
+public class AdministratorDonanteController extends AbstractController<Administrator, Donante> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	protected AuthenticatedDonanteListService	listService;
+	protected AdministratorDonanteListService	listService;
 
 	@Autowired
-	protected AuthenticatedDonanteShowService	showService;
+	protected AdministratorDonanteShowService	showService;
+
+	@Autowired
+	protected AdmnistratorDonanteUpdateService	updateService;
 
 	// Constructors -----------------------------------------------------------
 
@@ -28,6 +31,7 @@ public class AuthenticatedDonanteController extends AbstractController<Authentic
 	protected void initialise() {
 		super.addBasicCommand("list", this.listService);
 		super.addBasicCommand("show", this.showService);
+		super.addBasicCommand("update", this.updateService);
 	}
 
 }

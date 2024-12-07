@@ -1,22 +1,21 @@
 
-package acme.features.authenticated.donante;
+package acme.features.administrator.donante;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.donante.Donante;
 import acme.framework.components.accounts.Administrator;
-import acme.framework.components.accounts.Authenticated;
 import acme.framework.components.models.Tuple;
 import acme.framework.services.AbstractService;
 
 @Service
-public class AuthenticatedDonanteUpdateService extends AbstractService<Authenticated, Donante> {
+public class AdmnistratorDonanteUpdateService extends AbstractService<Administrator, Donante> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	protected AuthenticatedDonanteRepository repository;
+	protected AdministratorDonanteRepository repository;
 
 	// AbstractService interface ----------------------------------------------
 

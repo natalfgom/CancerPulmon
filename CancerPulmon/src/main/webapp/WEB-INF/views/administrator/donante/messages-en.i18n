@@ -1,0 +1,16 @@
+administrator.donante.list.label.nhusa = NHUSA
+administrator.donante.list.label.nombre = Name
+administrator.donante.list.label.apellidos = Surname
+
+administrator.donante.form.label.nhusa = NHUSA
+administrator.donante.form.label.nombre = Name
+administrator.donante.form.label.apellidos = Surname
+administrator.donante.form.label.grupoSanguineo = Blood Group
+administrator.donante.form.label.organoDisponible = Available Organ
+administrator.donante.form.label.volumenPulmonar = Volumen Pulmonar
+administrator.donante.form.label.fechaExtraccion = Fecha Extraccion
+
+master.menu.administrator.donante.list = Edit Donors
+administrator.donante.form.button.update = Save changes
+
+
