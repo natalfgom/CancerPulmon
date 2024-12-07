@@ -21,6 +21,9 @@ public class AuthenticatedDonanteController extends AbstractController<Authentic
 	@Autowired
 	protected AuthenticatedDonanteShowService	showService;
 
+	@Autowired
+	protected AuthenticatedDonanteUpdateService			updateService;
+
 	// Constructors -----------------------------------------------------------
 
 
@@ -28,6 +31,7 @@ public class AuthenticatedDonanteController extends AbstractController<Authentic
 	protected void initialise() {
 		super.addBasicCommand("list", this.listService);
 		super.addBasicCommand("show", this.showService);
+		super.addBasicCommand("update", this.updateService);
 	}
 
 }
