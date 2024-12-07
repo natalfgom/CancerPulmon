@@ -36,6 +36,9 @@
              <acme:submit code="administrator.donante.form.button.delete" action="/administrator/donante/delete"/>
         </jstl:when>
     </jstl:choose>
+    
+    <!-- Botón para redirigir a la creación de un nuevo donante -->
+<acme:button code="administrator.donante.form.button.create" action="/administrator/donante/create" />
 </acme:form>
 
 

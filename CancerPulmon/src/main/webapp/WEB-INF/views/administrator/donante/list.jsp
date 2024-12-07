@@ -7,3 +7,6 @@
     <acme:list-column code="authenticated.donante.list.label.nombre" path="nombre" width=""/>
     <acme:list-column code="authenticated.donante.list.label.apellidos" path="apellidos" width=""/>
 </acme:list>
+
+<acme:button code="administrator.donante.list.button.create" action="/administrator/donante/create"/>
+

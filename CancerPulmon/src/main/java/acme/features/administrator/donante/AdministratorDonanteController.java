@@ -27,6 +27,9 @@ public class AdministratorDonanteController extends AbstractController<Administr
 	@Autowired
 	protected AdmnistratorDonanteDeleteService	deleteService;
 
+	@Autowired
+	protected AdmnistratorDonanteCreateService	createService;
+
 	// Constructors -----------------------------------------------------------
 
 
@@ -36,6 +39,7 @@ public class AdministratorDonanteController extends AbstractController<Administr
 		super.addBasicCommand("show", this.showService);
 		super.addBasicCommand("update", this.updateService);
 		super.addBasicCommand("delete", this.deleteService);
+		super.addBasicCommand("create", this.createService);
 	}
 
 }
