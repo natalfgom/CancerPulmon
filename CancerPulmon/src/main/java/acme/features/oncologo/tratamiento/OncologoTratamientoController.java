@@ -19,6 +19,8 @@ public class OncologoTratamientoController extends AbstractController<Oncologo, 
 	protected OncologoTratamientoShowService	showService;
 	@Autowired
 	protected OncologoTratamientoUpdateService	updateService;
+	@Autowired
+	protected OncologoTratamientoDeleteService	deleteService;
 
 
 	@PostConstruct
@@ -26,5 +28,6 @@ public class OncologoTratamientoController extends AbstractController<Oncologo, 
 		super.addBasicCommand("list", this.listService);
 		super.addBasicCommand("show", this.showService);
 		super.addBasicCommand("update", this.updateService);
+		super.addBasicCommand("delete", this.deleteService);
 	}
 }
