@@ -10,6 +10,6 @@ administrator.donante.form.label.organoDisponible = Órgano Disponible
 administrator.donante.form.label.volumenPulmonar = Volumen Pulmonar
 administrator.donante.form.label.fechaExtraccion = Fecha Extraccion
 
-
+master.menu.oncologo = Acciones
 master.menu.administrator.donante.list = Editar Donantes
 administrator.donante.form.button.update = Guardar cambios
