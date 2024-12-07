@@ -33,6 +33,7 @@
     <jstl:choose>
         <jstl:when test="${acme:anyOf(_command, 'show|update|delete')}">
             <acme:submit code="administrator.donante.form.button.update" action="/administrator/donante/update"/>
+             <acme:submit code="administrator.donante.form.button.delete" action="/administrator/donante/delete"/>
         </jstl:when>
     </jstl:choose>
 </acme:form>

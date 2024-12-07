@@ -13,5 +13,6 @@ administrator.donante.form.label.fechaExtraccion = Fecha Extraccion
 master.menu.oncologo = Actions
 master.menu.administrator.donante.list = Edit Donors
 administrator.donante.form.button.update = Save changes
+administrator.donante.form.button.delete = Delete Donor
 
 
