@@ -1,6 +1,7 @@
 
 package acme.entities.tratamiento;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
@@ -36,7 +37,9 @@ public class Tratamiento extends AbstractEntity {
 	// Relationships ----------------------------------------------------------
 	@NotNull
 	@Valid
-	@ManyToOne(optional = false)
+	@ManyToOne(cascade = {
+		CascadeType.REMOVE, CascadeType.REFRESH
+	})
 	protected Paciente			paciente; //Con la entidad paciente
 
 

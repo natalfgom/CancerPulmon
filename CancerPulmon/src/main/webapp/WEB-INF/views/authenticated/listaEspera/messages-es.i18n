@@ -1,0 +1,6 @@
+authenticated.paciente.list.label.nuhsa = NUHSA
+authenticated.paciente.list.label.name = Nombre
+authenticated.paciente.list.label.surname = Apellido
+authenticated.paciente.form.label.fechanacimiento = Fecha Nacimiente
+authenticated.paciente.form.label.genero = Genero
+authenticated.paciente.form.label.gruposanguineo = Grupo Sanguineo

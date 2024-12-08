@@ -1,0 +1,10 @@
+# Mensajes para el formulario de paciente
+administrator.paciente.form.label.nusha=Número de HUCSA
+administrator.paciente.form.label.name=Nombre
+administrator.paciente.form.label.surname=Apellido
+administrator.paciente.form.label.genero=Género
+administrator.paciente.form.label.fechaNacimiento=Fecha de Nacimiento
+administrator.paciente.form.label.grupoSanguineo=Grupo Sanguíneo
+administrator.paciente.form.button.delete=Borrar
+administrator.paciente.form.button.update=Actualizar
+administrator.paciente.list.button.create=Crear paciente

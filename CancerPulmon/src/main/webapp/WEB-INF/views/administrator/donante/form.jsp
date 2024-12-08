@@ -31,14 +31,16 @@
     <acme:input-moment code="administrator.donante.form.label.fechaExtraccion" path="fechaExtraccion"/>
 
     <jstl:choose>
-        <jstl:when test="${acme:anyOf(_command, 'show|update|delete')}">
-            <acme:submit code="administrator.donante.form.button.update" action="/administrator/donante/update"/>
-             <acme:submit code="administrator.donante.form.button.delete" action="/administrator/donante/delete"/>
-        </jstl:when>
-    </jstl:choose>
-    
-    <!-- Botón para redirigir a la creación de un nuevo donante -->
-<acme:button code="administrator.donante.form.button.create" action="/administrator/donante/create" />
+    <jstl:when test="${acme:anyOf(_command, 'show|update|delete')}">
+        <acme:submit code="administrator.donante.form.button.update" action="/administrator/donante/update"/>
+        <acme:submit code="administrator.donante.form.button.delete" action="/administrator/donante/delete"/>
+    </jstl:when>
+    <jstl:when test="${_command == 'create'}">
+        <acme:submit code="administrator.donante.form.button.create" action="/administrator/donante/create"/>
+    </jstl:when>
+</jstl:choose>
+
+	
 </acme:form>
 
 

@@ -2,10 +2,12 @@
 package acme.features.authenticated.tratamiento;
 
 import java.util.Collection;
+import java.util.List;
 
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
+import acme.entities.tratamiento.TipoTratamiento;
 import acme.entities.tratamiento.Tratamiento;
 import acme.framework.repositories.AbstractRepository;
 
@@ -21,5 +23,8 @@ public interface AuthenticatedTratamientoRepository extends AbstractRepository {
 
 	@Query("SELECT t FROM Tratamiento t JOIN FETCH t.paciente p")
 	Collection<Tratamiento> findAllTratamientosWithPaciente();
+
+	@Query("select t from Tratamiento t where t.tipoTratamiento = :tipoTratamiento")
+	List<Tratamiento> findByTipoTratamiento(TipoTratamiento tipoTratamiento);
 
 }

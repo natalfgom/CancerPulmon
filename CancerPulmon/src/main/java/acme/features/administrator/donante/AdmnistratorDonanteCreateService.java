@@ -105,11 +105,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.donante.Donante;
-import acme.entities.donante.OrganoDisponible;
 import acme.framework.components.accounts.Administrator;
 import acme.framework.components.models.Tuple;
 import acme.framework.services.AbstractService;
-import acme.roles.GrupoSanguineo;
 
 @Service
 public class AdmnistratorDonanteCreateService extends AbstractService<Administrator, Donante> {
@@ -148,13 +146,8 @@ public class AdmnistratorDonanteCreateService extends AbstractService<Administra
 
 		// Crea una nueva instancia de Donante con valores iniciales por defecto.
 		object = new Donante();
-		object.setNhusa("");
-		object.setNombre("");
-		object.setApellidos("");
-		object.setGrupoSanguineo(GrupoSanguineo.O_POSITIVO);
-		object.setOrganoDisponible(OrganoDisponible.Lobulo_pulmonar);
-		object.setVolumenPulmonar(0.0);
-		object.setFechaExtraccion(null);
+		// Establece el estado de "draftMode" (modo borrador) del paciente en true.
+		object.setDraftMode(true);
 
 		// Coloca el objeto en el buffer para su uso en la vista.
 		super.getBuffer().setData(object);

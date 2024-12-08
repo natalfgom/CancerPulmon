@@ -9,7 +9,6 @@ import javax.persistence.Enumerated;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
-
 import acme.framework.data.AbstractEntity;
 import acme.roles.GrupoSanguineo;
 import lombok.Getter;
@@ -47,4 +46,6 @@ public class Donante extends AbstractEntity {
 
 	@NotNull
 	protected Date				fechaExtraccion;
+
+	protected boolean			draftMode;
 }
