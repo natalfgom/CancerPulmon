@@ -14,11 +14,10 @@
     <acme:input-moment code="administrator.paciente.form.label.fechaNacimiento" path="fechaNacimiento"/>
 
     <jstl:choose>
-    <jstl:when test="${(_command == 'show' || _command == 'update' || _command == 'delete') && draftMode == false}">
+    <jstl:when test="${acme:anyOf(_command, 'show|update|delete')}">
         <acme:submit code="administrator.paciente.form.button.update" action="/administrator/paciente/update"/>
         <acme:submit code="administrator.paciente.form.button.delete" action="/administrator/paciente/delete"/>
     </jstl:when>
-    
     <jstl:when test="${_command == 'create'}">
         <acme:submit code="administrator.paciente.form.button.create" action="/administrator/paciente/create"/>
     </jstl:when>
