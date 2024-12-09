@@ -7,11 +7,11 @@
 
     <acme:input-textbox code="authenticated.tratamiento.form.label.estadoTratamiento" path="estadoTratamiento"/>  
 
-    <acme:input-textbox code="authenticated.tratamiento.form.label.tipoTratamiento" path="tipoTratamiento" readonly="true"/>
-    <acme:input-textbox code="authenticated.tratamiento.form.label.paciente.nuhsa" path="nuhsa" readonly="true"/>
-    <acme:input-textbox code="authenticated.tratamiento.form.label.paciente.name" path="name" readonly="true"/>
-    <acme:input-textbox code="authenticated.tratamiento.form.label.paciente.surname" path="surname" readonly="true"/>
-    <acme:input-textbox code="authenticated.tratamiento.form.label.paciente.genero" path="genero" readonly="true"/>
+    <acme:input-textbox code="authenticated.tratamiento.form.label.tipoTratamiento" path="tipoTratamiento" />
+    <acme:input-textbox code="authenticated.tratamiento.form.label.paciente.nuhsa" path="nuhsa" />
+    <acme:input-textbox code="authenticated.tratamiento.form.label.paciente.name" path="name"/>
+    <acme:input-textbox code="authenticated.tratamiento.form.label.paciente.surname" path="surname" />
+    <acme:input-textbox code="authenticated.tratamiento.form.label.paciente.genero" path="genero" />
     <acme:input-textbox code="authenticated.tratamiento.form.label.paciente.fechaNacimiento" path="fechaNacimiento" readonly="true"/>
     <acme:input-textbox code="authenticated.tratamiento.form.label.paciente.grupoSanguineo" path="grupoSanguineo" readonly="true"/>
 

@@ -8,6 +8,7 @@ import org.springframework.stereotype.Repository;
 
 import acme.entities.tratamiento.Tratamiento;
 import acme.framework.repositories.AbstractRepository;
+import acme.roles.Paciente;
 
 @Repository
 public interface OncologoTratamientoRepository extends AbstractRepository {
@@ -21,5 +22,8 @@ public interface OncologoTratamientoRepository extends AbstractRepository {
 
 	@Query("SELECT t FROM Tratamiento t JOIN FETCH t.paciente p")
 	Collection<Tratamiento> findAllTratamientosWithPaciente();
+
+	@Query("select p from Paciente p where p.id = :id")
+	Paciente findOnePacienteById(int id);
 
 }

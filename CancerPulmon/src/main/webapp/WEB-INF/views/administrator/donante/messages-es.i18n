@@ -14,3 +14,4 @@ master.menu.oncologo = Acciones
 master.menu.administrator.donante.list = Editar Donantes
 administrator.donante.form.button.update = Guardar cambios
 administrator.donante.form.button.delete = Eliminar Donante
+master.menu.administrator.donante.create.button = Crear Donante

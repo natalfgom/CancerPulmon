@@ -38,8 +38,6 @@
 			<acme:menu-suboption code="master.menu.administrator.user-accounts" action="/administrator/user-account/list"/>
     		<acme:menu-suboption code="master.menu.administrator.donante.list" action="/administrator/donante/list"/>
     		<acme:menu-suboption code="master.menu.administrator.paciente.list" action="/administrator/paciente/list"/>
-    		
- <!-- Aquí se añade el botón para crear -->
     		<acme:menu-separator/>
   		  <acme:menu-suboption code="master.menu.administrator.donante.create.button" action="/administrator/donante/create"/>
 			<acme:menu-separator/>

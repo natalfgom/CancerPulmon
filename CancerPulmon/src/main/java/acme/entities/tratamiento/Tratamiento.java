@@ -46,4 +46,7 @@ public class Tratamiento extends AbstractEntity {
 	public Paciente getPaciente() {
 		return this.paciente;
 	}
+
+
+	protected boolean draftMode;
 }
