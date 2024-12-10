@@ -21,7 +21,7 @@
               <acme:submit code="oncologo.tratamiento.form.button.delete" action="/oncologo/tratamiento/delete"/>
         </jstl:when>
     <jstl:when test="${_command == 'create'}">
-        <acme:submit code="administrator.donante.form.button.create" action="/oncologo/tratamiento/create"/>
+        <acme:button code="administrator.donante.form.button.create" action="/oncologo/tratamiento/create?pacienteId=${pacienteId }"/>
     </jstl:when>
         
     </jstl:choose>

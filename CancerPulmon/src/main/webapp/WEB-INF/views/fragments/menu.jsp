@@ -23,9 +23,10 @@
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.authenticated" access="isAuthenticated()">
-    		<acme:menu-suboption code="master.menu.authenticated.paciente.list" action="/authenticated/paciente/list"/>
+<%--     		<acme:menu-suboption code="master.menu.authenticated.paciente.list" action="/authenticated/paciente/list"/> --%>
     		<acme:menu-suboption code="master.menu.authenticated.tratamiento.list" action="/authenticated/tratamiento/list"/>
     		<acme:menu-suboption code="master.menu.authenticated.donante.list" action="/authenticated/donante/list"/>
+    		<acme:menu-suboption code="master.menu.authenticated.listae" action="/authenticated/tratamiento/list-all"/>
     		<!--<acme:menu-separator/>
     		<acme:menu-suboption code="master.menu.authenticated.money-exchange" action="/authenticated/money-exchange/perform"/> -->
     		<!--<acme:menu-separator/>
@@ -49,6 +50,7 @@
 		
 			<acme:menu-option code="master.menu.oncologo" access="hasRole('Oncologo')">
     		<acme:menu-suboption code="master.menu.oncologo.tratamiento.list" action="/oncologo/tratamiento/list" />
+    		<acme:menu-suboption code="master.menu.oncologo.paciente.list" action="/oncologo/paciente/list" />    		
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.provider" access="hasRole('Provider')">

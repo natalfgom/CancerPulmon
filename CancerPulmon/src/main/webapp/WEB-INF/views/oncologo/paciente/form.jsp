@@ -25,7 +25,7 @@
 
    <acme:submit 
     code="tratamiento" 
-    action="/oncologo/tratamiento/create?masterId=${masterId}" />
+    action="/oncologo/tratamiento/create?pacienteId=${pacienteId}" />
 
 </acme:form>
 

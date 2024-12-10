@@ -14,14 +14,18 @@ import acme.framework.controllers.AbstractController;
 public class AuthenticatedTratamientoController extends AbstractController<Authenticated, Tratamiento> {
 
 	@Autowired
-	protected AuthenticatedTratamientoListService	listService;
+	protected AuthenticatedTratamientoListService			listService;
 	@Autowired
-	protected AuthenticatedTratamientoShowService	showService;
+	protected AuthenticatedTratamientoShowService			showService;
+
+	@Autowired
+	protected AuthenticatedTratamientoListaEsperaService	listaEspera;
 
 
 	@PostConstruct
 	protected void initialise() {
 		super.addBasicCommand("list", this.listService);
 		super.addBasicCommand("show", this.showService);
+		super.addCustomCommand("list-all", "list", this.listaEspera);
 	}
 }

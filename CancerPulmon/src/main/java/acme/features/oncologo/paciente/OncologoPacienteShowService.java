@@ -1,21 +1,21 @@
 
-package acme.features.authenticated.paciente;
+package acme.features.oncologo.paciente;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.framework.components.accounts.Authenticated;
 import acme.framework.components.models.Tuple;
 import acme.framework.services.AbstractService;
+import acme.roles.Oncologo;
 import acme.roles.Paciente;
 
 @Service
-public class AuthenticatedPacienteShowService extends AbstractService<Authenticated, Paciente> {
+public class OncologoPacienteShowService extends AbstractService<Oncologo, Paciente> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	protected AuthenticatedPacienteRepository repository;
+	protected OncologoPacienteRepository repository;
 
 	// AbstractService interface ----------------------------------------------
 

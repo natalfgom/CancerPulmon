@@ -20,7 +20,7 @@ public class OncologoTratamientoCreateService extends AbstractService<Oncologo, 
 
 	@Override
 	public void check() {
-		final boolean status = super.getRequest().hasData("masterId", int.class);
+		final boolean status = super.getRequest().hasData("pacienteId", int.class);
 		super.getResponse().setChecked(status);
 	}
 
@@ -28,7 +28,7 @@ public class OncologoTratamientoCreateService extends AbstractService<Oncologo, 
 	public void authorise() {
 		boolean status;
 
-		final int pacienteId = super.getRequest().getData("masterId", int.class);
+		final int pacienteId = super.getRequest().getData("pacienteId", int.class);
 		final Paciente paciente = this.repository.findOnePacienteById(pacienteId);
 		status = paciente != null && super.getRequest().getPrincipal().hasRole(Oncologo.class);
 
@@ -41,7 +41,7 @@ public class OncologoTratamientoCreateService extends AbstractService<Oncologo, 
 		int pacienteId;
 
 		// Obtenemos el paciente correspondiente usando el id
-		pacienteId = super.getRequest().getData("masterId", int.class);
+		pacienteId = super.getRequest().getData("pacienteId", int.class);
 		final Paciente paciente = this.repository.findOnePacienteById(pacienteId);
 
 		// Creamos un nuevo objeto Tratamiento y lo configuramos
@@ -81,9 +81,7 @@ public class OncologoTratamientoCreateService extends AbstractService<Oncologo, 
 		assert object != null;
 
 		// Desvinculamos el tratamiento para enviarlo a la vista
-		Tuple tuple = super.unbind(object, "tipoTratamiento", "estadoTratamiento");
-
-		tuple = super.unbind(object, "tipoTratamiento", "estadoTratamiento");
+		final Tuple tuple = super.unbind(object, "tipoTratamiento", "estadoTratamiento");
 
 		if (object.getPaciente() != null) {
 			tuple.put("nuhsa", object.getPaciente().getNuhsa());

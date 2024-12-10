@@ -23,9 +23,9 @@
     <acme:input-url code="authenticated.paciente.form.label.fechanacimiento" path="fechaNacimiento"/>
     <acme:input-url code="authenticated.paciente.form.label.gruposanguineo" path="grupoSanguineo"/>
 
-   <acme:submit 
+   <acme:button
     code="tratamiento" 
-    action="/oncologo/tratamiento/create?masterId=${masterId}" />
+    action="/oncologo/tratamiento/create?pacienteId=${pacienteId}" />
 
 </acme:form>
 
