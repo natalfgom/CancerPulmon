@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.tratamiento.EstadoTratamiento;
+import acme.entities.tratamiento.TipoTratamiento;
 import acme.entities.tratamiento.Tratamiento;
 import acme.framework.components.models.Tuple;
 import acme.framework.services.AbstractService;
@@ -48,7 +49,7 @@ public class OncologoTratamientoCreateService extends AbstractService<Oncologo, 
 		object = new Tratamiento();
 		object.setPaciente(paciente);
 		object.setEstadoTratamiento(EstadoTratamiento.PENDIENTE); // Estado por defecto
-		object.setTipoTratamiento(null);
+		object.setTipoTratamiento(TipoTratamiento.OTRO);
 
 		// Colocamos el objeto en el buffer para que esté disponible en la vista
 		super.getBuffer().setData(object);

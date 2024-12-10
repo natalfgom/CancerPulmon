@@ -6,9 +6,8 @@
 <acme:form>
 
     <acme:input-textbox code="authenticated.tratamiento.form.label.estadoTratamiento" path="estadoTratamiento"/>  
-
-    <acme:input-textbox code="authenticated.tratamiento.form.label.tipoTratamiento" path="tipoTratamiento" />
-    <acme:input-textbox code="authenticated.tratamiento.form.label.paciente.nuhsa" path="nuhsa" readonly="true" />
+	<acme:input-textbox code="authenticated.tratamiento.form.label.tipoTratamiento" path="tipoTratamiento" />
+    <acme:input-textbox code="authenticated.tratamiento.form.label.paciente.nuhsa" path="nuhsa" readonly="true"/>
     <acme:input-textbox code="authenticated.tratamiento.form.label.paciente.name" path="name" readonly="true"/>
     <acme:input-textbox code="authenticated.tratamiento.form.label.paciente.surname" path="surname" readonly="true" />
     <acme:input-textbox code="authenticated.tratamiento.form.label.paciente.genero" path="genero" readonly="true" />
@@ -21,7 +20,7 @@
               <acme:submit code="oncologo.tratamiento.form.button.delete" action="/oncologo/tratamiento/delete"/>
         </jstl:when>
     <jstl:when test="${_command == 'create'}">
-        <acme:button code="administrator.donante.form.button.create" action="/oncologo/tratamiento/create?pacienteId=${pacienteId }"/>
+        <acme:submit code="creardonante" action="/oncologo/tratamiento/create?pacienteId=${pacienteId }"/>
     </jstl:when>
         
     </jstl:choose>

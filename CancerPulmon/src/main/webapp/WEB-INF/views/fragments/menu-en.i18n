@@ -49,14 +49,32 @@ master.menu.user-account.become-provider = Become a provider
 master.menu.user-account.consumer = Consumer data
 master.menu.user-account.become-consumer = Become a consumer
 
-#Paciente
-master.menu.authenticated.paciente.list = List Patient
-master.menu.authenticated = Lists
-
+####Aministrator####
+master.menu.administrator.config = Configuracion
+#Donante 
+master.menu.administrator.donantes = Donantes
+master.menu.administrator.donante.list = Donantes Diponibles
+master.menu.administrator.donante.create = Crear Donante
 #Tratamiento
-master.menu.authenticated.tratamiento.list =  Treatment List
-master.menu.authenticated = Lists
+master.menu.administrator.ttos  = Tratamientos
+master.menu.administrator.listae = Lista de espera
+master.menu.administrator.tratamiento.list = Tratamientos
+#Pacientes
+master.menu.administrator.pacientes = Pacientes
+master.menu.administrator.paciente.list = Lista Pacientes
+master.menu.administrator.paciente.create = Crear Paciente 
 
-#Tratamiento
-master.menu.authenticated.donante.list =  Donor List
-master.menu.authenticated = Lists
+
+###Oncologo###
+#Tratamientos 
+master.menu.oncologo.ttos = Tratamientos
+master.menu.oncologo.listae = Lista de Espera
+master.menu.oncologo.tratamiento.list = Tratamientos
+
+#Donantes --%>
+master.menu.oncologo.donantes = Donantes
+master.menu.oncologo.donante.list = Donantes Disponibles
+
+#Pacientes
+master.menu.oncologo.pacientes = Pacientes
+master.menu.oncologo.paciente.list = Lista Pacientes
