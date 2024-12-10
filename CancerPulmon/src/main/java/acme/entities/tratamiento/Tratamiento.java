@@ -1,6 +1,8 @@
 
 package acme.entities.tratamiento;
 
+import java.util.Date;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
@@ -34,6 +36,13 @@ public class Tratamiento extends AbstractEntity {
 	@NotNull
 	protected EstadoTratamiento	estadoTratamiento; // Enum: EN_CURSO, FINALIZADO, PENDIENTE
 
+	@Enumerated(EnumType.STRING)
+	@NotNull
+	protected Urgencia			urgencia; //Alta, Baja o media
+
+	@NotNull
+	protected Date				fechaInclusion;
+
 	// Relationships ----------------------------------------------------------
 	@NotNull
 	@Valid
@@ -46,7 +55,4 @@ public class Tratamiento extends AbstractEntity {
 	public Paciente getPaciente() {
 		return this.paciente;
 	}
-
-
-	protected boolean draftMode;
 }

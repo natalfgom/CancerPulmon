@@ -17,13 +17,10 @@ public class OncologoTratamientoCreateService extends AbstractService<Oncologo, 
 	@Autowired
 	protected OncologoTratamientoRepository repository;
 
-	// AbstractService interface methods
-
 
 	@Override
 	public void check() {
-		// Cambia el nombre del parámetro 'id' en vez de 'masterId'
-		final boolean status = super.getRequest().hasData("id", int.class);
+		final boolean status = super.getRequest().hasData("masterId", int.class);
 		super.getResponse().setChecked(status);
 	}
 
@@ -31,8 +28,7 @@ public class OncologoTratamientoCreateService extends AbstractService<Oncologo, 
 	public void authorise() {
 		boolean status;
 
-		// Asegúrate de que el usuario tiene el rol de Oncólogo
-		final int pacienteId = super.getRequest().getData("id", int.class);
+		final int pacienteId = super.getRequest().getData("masterId", int.class);
 		final Paciente paciente = this.repository.findOnePacienteById(pacienteId);
 		status = paciente != null && super.getRequest().getPrincipal().hasRole(Oncologo.class);
 
@@ -45,20 +41,14 @@ public class OncologoTratamientoCreateService extends AbstractService<Oncologo, 
 		int pacienteId;
 
 		// Obtenemos el paciente correspondiente usando el id
-		pacienteId = super.getRequest().getData("id", int.class);
+		pacienteId = super.getRequest().getData("masterId", int.class);
 		final Paciente paciente = this.repository.findOnePacienteById(pacienteId);
-
-		if (paciente == null)
-			throw new IllegalArgumentException("Paciente no encontrado con id: " + pacienteId);
 
 		// Creamos un nuevo objeto Tratamiento y lo configuramos
 		object = new Tratamiento();
 		object.setPaciente(paciente);
 		object.setEstadoTratamiento(EstadoTratamiento.PENDIENTE); // Estado por defecto
 		object.setTipoTratamiento(null);
-
-		// Activamos el modo borrador para el tratamiento
-		object.setDraftMode(true);
 
 		// Colocamos el objeto en el buffer para que esté disponible en la vista
 		super.getBuffer().setData(object);
@@ -76,7 +66,6 @@ public class OncologoTratamientoCreateService extends AbstractService<Oncologo, 
 	public void validate(final Tratamiento object) {
 		assert object != null;
 
-		// Añadir validaciones específicas si es necesario
 	}
 
 	@Override
@@ -92,7 +81,26 @@ public class OncologoTratamientoCreateService extends AbstractService<Oncologo, 
 		assert object != null;
 
 		// Desvinculamos el tratamiento para enviarlo a la vista
-		final Tuple tuple = super.unbind(object, "tipoTratamiento", "estadoTratamiento");
+		Tuple tuple = super.unbind(object, "tipoTratamiento", "estadoTratamiento");
+
+		tuple = super.unbind(object, "tipoTratamiento", "estadoTratamiento");
+
+		if (object.getPaciente() != null) {
+			tuple.put("nuhsa", object.getPaciente().getNuhsa());
+			tuple.put("name", object.getPaciente().getName());
+			tuple.put("surname", object.getPaciente().getSurname());
+			tuple.put("genero", object.getPaciente().getGenero());
+			tuple.put("fechaNacimiento", object.getPaciente().getFechaNacimiento());
+			tuple.put("grupoSanguineo", object.getPaciente().getGrupoSanguineo());
+		} else {
+
+			tuple.put("nuhsa", "No disponible");
+			tuple.put("name", "No disponible");
+			tuple.put("surname", "No disponible");
+			tuple.put("genero", "No disponible");
+			tuple.put("fechaNacimiento", "No disponible");
+			tuple.put("grupoSanguineo", "No disponible");
+		}
 
 		// Pasamos el ID del paciente al modelo para la vista
 		tuple.put("pacienteId", object.getPaciente().getId());

@@ -59,6 +59,8 @@ public class AuthenticatedPacienteShowService extends AbstractService<Authentica
 
 		tuple = super.unbind(object, "nuhsa", "name", "surname", "genero", "grupoSanguineo", "fechaNacimiento");
 
+		// Pasamos el ID del paciente al modelo para la vista
+		tuple.put("masterId", object.getId());
 		super.getResponse().setData(tuple);
 	}
 
