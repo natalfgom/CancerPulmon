@@ -1,23 +1,22 @@
-key,tipoTratamiento,estadoTratamiento,urgencia,fechaInclusion,key:paciente
-tratamiento-1,QUIMIOTERAPIA,EN_CURSO,Alta,2019/01/01 00:00,paciente-01
-tratamiento-2,RADIOTERAPIA,FINALIZADO,Baja,2019/02/01 00:00,paciente-02
-tratamiento-3,TRASPLANTE,PENDIENTE,Media,2019/03/01 00:00,paciente-03
-tratamiento-4,CIRUGIA,EN_CURSO,Alta,2019/04/01 00:00,paciente-04
-tratamiento-5,TRASPLANTE,FINALIZADO,Baja,2019/05/01 00:00,paciente-05
-tratamiento-6,OTRO,PENDIENTE,Media,2019/06/01 00:00,paciente-01
-tratamiento-7,TRASPLANTE,EN_CURSO,Alta,2019/07/01 00:00,paciente-02
-tratamiento-8,RADIOTERAPIA,PENDIENTE,Baja,2019/08/01 00:00,paciente-03
-tratamiento-9,CIRUGIA,FINALIZADO,Media,2019/09/01 00:00,paciente-04
-tratamiento-10,INMUNOTERAPIA,EN_CURSO,Alta,2019/10/01 00:00,paciente-05
-tratamiento-11,QUIMIOTERAPIA,EN_CURSO,Baja,2019/11/01 00:00,paciente-10
-tratamiento-12,RADIOTERAPIA,FINALIZADO,Media,2019/12/01 00:00,paciente-11
-tratamiento-13,TRASPLANTE,PENDIENTE,Alta,2019/01/15 00:00,paciente-12
-tratamiento-14,CIRUGIA,EN_CURSO,Baja,2019/02/15 00:00,paciente-13
-tratamiento-15,TRASPLANTE,FINALIZADO,Media,2019/03/15 00:00,paciente-14
-tratamiento-16,OTRO,PENDIENTE,Alta,2019/04/15 00:00,paciente-15
-tratamiento-17,TRASPLANTE,EN_CURSO,Baja,2019/05/15 00:00,paciente-16
-tratamiento-18,RADIOTERAPIA,PENDIENTE,Media,2019/06/15 00:00,paciente-17
-tratamiento-19,CIRUGIA,FINALIZADO,Alta,2019/07/15 00:00,paciente-18
-tratamiento-20,INMUNOTERAPIA,EN_CURSO,Baja,2019/06/18 00:00,paciente-19
-tratamiento-21,CIRUGIA,FINALIZADO,Media,2019/09/15 00:00,paciente-20
-
+key,tipoTratamiento,estadoTratamiento,urgencia,key:paciente
+tratamiento-1,QUIMIOTERAPIA,EN_CURSO,Alta,paciente-01
+tratamiento-2,RADIOTERAPIA,FINALIZADO,Baja,paciente-02
+tratamiento-3,TRASPLANTE,PENDIENTE,Media,paciente-03
+tratamiento-4,CIRUGIA,EN_CURSO,Alta,paciente-04
+tratamiento-5,TRASPLANTE,FINALIZADO,Baja,paciente-05
+tratamiento-6,OTRO,PENDIENTE,Media,paciente-01
+tratamiento-7,TRASPLANTE,EN_CURSO,Alta,paciente-02
+tratamiento-8,RADIOTERAPIA,PENDIENTE,Baja,paciente-03
+tratamiento-9,CIRUGIA,FINALIZADO,Media,paciente-04
+tratamiento-10,INMUNOTERAPIA,EN_CURSO,Alta,paciente-05
+tratamiento-11,QUIMIOTERAPIA,EN_CURSO,Baja,paciente-10
+tratamiento-12,RADIOTERAPIA,FINALIZADO,Media,paciente-11
+tratamiento-13,TRASPLANTE,PENDIENTE,Alta,paciente-12
+tratamiento-14,CIRUGIA,EN_CURSO,Baja,paciente-13
+tratamiento-15,TRASPLANTE,FINALIZADO,Media,paciente-14
+tratamiento-16,OTRO,PENDIENTE,Alta,paciente-15
+tratamiento-17,TRASPLANTE,EN_CURSO,Baja,paciente-16
+tratamiento-18,RADIOTERAPIA,PENDIENTE,Media,paciente-17
+tratamiento-19,CIRUGIA,FINALIZADO,Alta,paciente-18
+tratamiento-20,INMUNOTERAPIA,EN_CURSO,Baja,paciente-19
+tratamiento-21,CIRUGIA,FINALIZADO,Media,paciente-20

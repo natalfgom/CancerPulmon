@@ -12,11 +12,11 @@ import acme.framework.components.models.Tuple;
 import acme.framework.services.AbstractService;
 
 @Service
-public class AdministratorTratamientoListService extends AbstractService<Administrator, Tratamiento> {
+public class AuthenticatedTratamientoListService extends AbstractService<Administrator, Tratamiento> {
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	protected AdministratorTratamientoRepository repository;
+	protected AuthenticatedTratamientoRepository repository;
 
 	// AbstractService interface ----------------------------------------------
 

@@ -57,7 +57,7 @@ public class OncologoTratamientoUpdateService extends AbstractService<Oncologo, 
 	public void bind(final Tratamiento object) {
 		assert object != null;
 
-		super.bind(object, "tipoTratamiento", "estadoTratamiento", "urgencia", "fechaInclusion");
+		super.bind(object, "tipoTratamiento", "estadoTratamiento", "urgencia");
 	}
 
 	@Override
@@ -78,7 +78,7 @@ public class OncologoTratamientoUpdateService extends AbstractService<Oncologo, 
 
 		Tuple tuple;
 
-		tuple = super.unbind(object, "tipoTratamiento", "estadoTratamiento", "urgencia", "fechaInclusion");
+		tuple = super.unbind(object, "tipoTratamiento", "estadoTratamiento", "urgencia");
 
 		super.getResponse().setData(tuple);
 	}

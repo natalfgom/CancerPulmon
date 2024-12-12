@@ -1,14 +1,17 @@
 authenticated.tratamiento.list.label.tipoTratamiento = Type
 authenticated.tratamiento.list.label.estadoTratamiento = State
 authenticated.tratamiento.list.label.paciente.nuhsa = NHUSA
-authenticated.tratamiento.list.label.paciente.urgencia = Urgency
+
 
 authenticated.tratamiento.form.label.tipoTratamiento = Type
-authenticated.tratamiento.form.label.estadoTratamiento = State
+authenticated.tratamiento.form.label.estadoTratamiento = Estado
 authenticated.tratamiento.form.label.paciente.nuhsa  = NHUSA
 authenticated.tratamiento.form.label.paciente.name = Name
 authenticated.tratamiento.form.label.paciente.surname = Surname
 authenticated.tratamiento.form.label.paciente.genero = Gender
 authenticated.tratamiento.form.label.paciente.fechaNacimiento = Birth Date
 authenticated.tratamiento.form.label.paciente.grupoSanguineo = Blood Group
-authenticated.tratamiento.form.label.urgencia = Urgency
+
+master.menu.oncologo.tratamiento.list = Edit Treatments
+oncologo.tratamiento.form.button.update = Save Changes
+oncologo.tratamiento.form.button.delete = Delete Treatment

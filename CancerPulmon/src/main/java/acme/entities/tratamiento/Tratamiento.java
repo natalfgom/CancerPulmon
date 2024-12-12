@@ -1,13 +1,11 @@
 
 package acme.entities.tratamiento;
 
-import java.sql.Date;
-
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.ManyToOne;
+import javax.persistence.Transient;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -40,15 +38,16 @@ public class Tratamiento extends AbstractEntity {
 
 	protected Urgencia			urgencia; //Alta, Baja o media
 
-	@NotNull
-	protected Date				fechaInclusion;
+	//	@NotNull
+	//	protected Date				fechaInclusion;
+
+	@Transient
+	private int					orden;
 
 	// Relationships ----------------------------------------------------------
 	@NotNull
 	@Valid
-	@ManyToOne(cascade = {
-		CascadeType.REMOVE, CascadeType.REFRESH
-	})
+	@ManyToOne
 	protected Paciente			paciente; //Con la entidad paciente
 
 

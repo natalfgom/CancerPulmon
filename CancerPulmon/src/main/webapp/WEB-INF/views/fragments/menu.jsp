@@ -108,8 +108,8 @@
 
         <%-- Desplegable para Gestión de Tratamientos / LE --%>
         <acme:menu-option code="master.menu.administrator.ttos" access="hasRole('Administrator')">
-		<acme:menu-suboption code="master.menu.administrator.listae" action="/authenticated/tratamiento/list-all"/> 
-		<acme:menu-suboption code="master.menu.administrator.tratamiento.list" action="/authenticated/tratamiento/list"/>
+		<acme:menu-suboption code="master.menu.administrator.listae" action="/administrator/tratamiento/list-all"/> 
+		<acme:menu-suboption code="master.menu.administrator.tratamiento.list" action="/administrator/tratamiento/list"/>
  		</acme:menu-option>
 
         <%-- Desplegable para Gestión de Donantes --%>
@@ -136,7 +136,7 @@
     	
     	<!--     Oncologo -->
 
-        <%-- Desplegable para Gestión de Tratamientos / LE --%>
+        <%-- Desplegable para Gestión de Tratamientos --%>
         <acme:menu-option code="master.menu.oncologo.ttos" access="hasRole('Oncologo')">
 		<acme:menu-suboption code="master.menu.oncologo.listae" action="/oncologo/tratamiento/list-all"/> 
 		<acme:menu-suboption code="master.menu.oncologo.tratamiento.list" action="/oncologo/tratamiento/list"/>
@@ -151,6 +151,14 @@
         <acme:menu-option code="master.menu.oncologo.pacientes" access="hasRole('Oncologo')">
         <acme:menu-suboption code="master.menu.oncologo.paciente.list" action="/oncologo/paciente/list" />
         </acme:menu-option>
+        
+        <!--     Paciente -->
+
+        <%-- Desplegable para Gestión de Tratamientos --%>
+        <acme:menu-option code="master.menu.paciente.espera" access="hasRole('Paciente')">
+		<acme:menu-suboption code="master.menu.oncologo.listae" action="/paciente/tratamiento/list"/> 
+		
+ 		</acme:menu-option>
 
     <acme:menu-right>
         <acme:menu-option code="master.menu.sign-up" action="/anonymous/user-account/create" access="isAnonymous()"/>

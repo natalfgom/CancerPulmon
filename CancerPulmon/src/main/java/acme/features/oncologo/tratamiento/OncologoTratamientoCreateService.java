@@ -60,7 +60,7 @@ public class OncologoTratamientoCreateService extends AbstractService<Oncologo, 
 		assert object != null;
 
 		// Vinculamos los datos del formulario con los atributos del objeto tratamiento
-		super.bind(object, "tipoTratamiento", "estadoTratamiento", "urgencia", "fechaInclusion");
+		super.bind(object, "tipoTratamiento", "estadoTratamiento", "urgencia");
 	}
 
 	@Override
@@ -82,7 +82,7 @@ public class OncologoTratamientoCreateService extends AbstractService<Oncologo, 
 		assert object != null;
 
 		// Desvinculamos el tratamiento para enviarlo a la vista
-		final Tuple tuple = super.unbind(object, "tipoTratamiento", "estadoTratamiento", "urgencia", "fechaInclusion");
+		final Tuple tuple = super.unbind(object, "tipoTratamiento", "estadoTratamiento", "urgencia");
 
 		if (object.getPaciente() != null) {
 			tuple.put("nuhsa", object.getPaciente().getNuhsa());

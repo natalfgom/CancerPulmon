@@ -1,16 +1,16 @@
 
-package acme.features.authenticated.tratamiento;
+package acme.features.administrator.tratamiento;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.tratamiento.Tratamiento;
-import acme.framework.components.accounts.Authenticated;
+import acme.framework.components.accounts.Administrator;
 import acme.framework.components.models.Tuple;
 import acme.framework.services.AbstractService;
 
 @Service
-public class AuthenticatedTratamientoShowService extends AbstractService<Authenticated, Tratamiento> {
+public class AuthenticatedTratamientoShowService extends AbstractService<Administrator, Tratamiento> {
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
@@ -72,7 +72,7 @@ public class AuthenticatedTratamientoShowService extends AbstractService<Authent
 
 		Tuple tuple;
 
-		tuple = super.unbind(object, "tipoTratamiento", "estadoTratamiento", "urgencia", "fechaInclusion");
+		tuple = super.unbind(object, "tipoTratamiento", "estadoTratamiento", "urgencia");
 
 		if (object.getPaciente() != null) {
 			tuple.put("nuhsa", object.getPaciente().getNuhsa());

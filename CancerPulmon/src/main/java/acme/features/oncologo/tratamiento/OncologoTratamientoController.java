@@ -23,12 +23,15 @@ public class OncologoTratamientoController extends AbstractController<Oncologo, 
 	protected OncologoTratamientoDeleteService	deleteService;
 	@Autowired
 	protected OncologoTratamientoCreateService	createService;
+	@Autowired
+	protected OncologoTratamientoListaEspera	listaEspera;
 
 
 	@PostConstruct
 	protected void initialise() {
 		super.addBasicCommand("list", this.listService);
 		super.addBasicCommand("show", this.showService);
+		super.addCustomCommand("list-all", "list", this.listaEspera);
 		super.addBasicCommand("update", this.updateService);
 		super.addBasicCommand("delete", this.deleteService);
 		super.addBasicCommand("create", this.createService);

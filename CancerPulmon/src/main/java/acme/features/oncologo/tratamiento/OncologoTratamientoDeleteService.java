@@ -4,7 +4,6 @@ package acme.features.oncologo.tratamiento;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.tratamiento.EstadoTratamiento;
 import acme.entities.tratamiento.Tratamiento;
 import acme.framework.components.models.Tuple;
 import acme.framework.services.AbstractService;
@@ -63,10 +62,6 @@ public class OncologoTratamientoDeleteService extends AbstractService<Oncologo, 
 	public void validate(final Tratamiento tratamiento) {
 		assert tratamiento != null;
 
-		// Verificamos que el estado del tratamiento sea "PENDIENTE"
-		if (tratamiento.getEstadoTratamiento() != EstadoTratamiento.PENDIENTE)
-			// Si el estado no es "PENDIENTE", lanzamos una excepción o marcamos un error
-			throw new IllegalStateException("El tratamiento solo puede ser eliminado si su estado es 'PENDIENTE'.");
 	}
 
 	@Override
@@ -81,7 +76,7 @@ public class OncologoTratamientoDeleteService extends AbstractService<Oncologo, 
 		assert tratamiento != null;
 
 		// No es necesario unbind ya que estamos eliminando el Donante, pero si necesitas enviar datos puedes hacerlo aquí
-		final Tuple tuple = super.unbind(tratamiento, "tipoTratamiento", "estadoTratamiento", "urgencia", "fechaInclusion");
+		final Tuple tuple = super.unbind(tratamiento, "tipoTratamiento", "estadoTratamiento", "urgencia");
 
 		super.getResponse().setData(tuple);
 	}

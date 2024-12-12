@@ -1,5 +1,5 @@
 
-package acme.features.authenticated.tratamiento;
+package acme.features.administrator.tratamiento;
 
 import javax.annotation.PostConstruct;
 
@@ -7,11 +7,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
 import acme.entities.tratamiento.Tratamiento;
-import acme.framework.components.accounts.Authenticated;
+import acme.framework.components.accounts.Administrator;
 import acme.framework.controllers.AbstractController;
 
 @Controller
-public class AuthenticatedTratamientoController extends AbstractController<Authenticated, Tratamiento> {
+public class AuthenticatedTratamientoController extends AbstractController<Administrator, Tratamiento> {
 
 	@Autowired
 	protected AuthenticatedTratamientoListService			listService;
