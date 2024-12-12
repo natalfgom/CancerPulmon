@@ -39,7 +39,7 @@ public class AuthenticatedTratamientoListaEsperaService extends AbstractService<
 
 		final TipoTratamiento tipo = TipoTratamiento.TRASPLANTE;
 
-		objects = this.repository.findByTipoTratamiento(tipo);
+		objects = this.repository.findByTipoTratamientoOrderByUrgenciaAndFechaInclusion(tipo);
 
 		super.getBuffer().setData(objects);
 	}
@@ -50,7 +50,7 @@ public class AuthenticatedTratamientoListaEsperaService extends AbstractService<
 
 		Tuple tuple;
 
-		tuple = super.unbind(object, "estadoTratamiento");
+		tuple = super.unbind(object, "estadoTratamiento", "tipoTratamiento", "urgencia", "fechaInclusion");
 
 		if (object.getPaciente() != null)
 			tuple.put("nuhsa", object.getPaciente().getNuhsa());

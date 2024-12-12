@@ -18,6 +18,8 @@
  <acme:form>
     <acme:input-textbox code="authenticated.tratamiento.form.label.tipoTratamiento" path="tipoTratamiento"/>    
     <acme:input-textbox code="authenticated.tratamiento.form.label.estadoTratamiento" path="estadoTratamiento"/>
+    <acme:input-textbox code="authenticated.tratamiento.form.label.fechaInclusion" path="fechaInclusion"/>    
+    <acme:input-textbox code="authenticated.tratamiento.form.label.urgencia" path="urgencia"/>
     <acme:input-textbox code="authenticated.tratamiento.form.label.paciente.nuhsa" path="nuhsa" />
     <acme:input-textbox code="authenticated.tratamiento.form.label.paciente.name" path="name" />
     <acme:input-textbox code="authenticated.tratamiento.form.label.paciente.surname" path="surname" />

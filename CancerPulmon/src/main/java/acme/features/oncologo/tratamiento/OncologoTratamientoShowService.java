@@ -72,7 +72,7 @@ public class OncologoTratamientoShowService extends AbstractService<Oncologo, Tr
 
 		Tuple tuple;
 
-		tuple = super.unbind(object, "tipoTratamiento", "estadoTratamiento");
+		tuple = super.unbind(object, "tipoTratamiento", "estadoTratamiento", "urgencia", "fechaInclusion");
 
 		if (object.getPaciente() != null) {
 			tuple.put("nuhsa", object.getPaciente().getNuhsa());

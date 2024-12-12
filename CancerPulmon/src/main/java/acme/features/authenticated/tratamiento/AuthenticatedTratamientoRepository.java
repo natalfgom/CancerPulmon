@@ -27,4 +27,7 @@ public interface AuthenticatedTratamientoRepository extends AbstractRepository {
 	@Query("select t from Tratamiento t where t.tipoTratamiento = :tipoTratamiento")
 	List<Tratamiento> findByTipoTratamiento(TipoTratamiento tipoTratamiento);
 
+	@Query("SELECT t FROM Tratamiento t WHERE t.tipoTratamiento = :tipoTratamiento ORDER BY t.urgencia, t.fechaInclusion")
+	List<Tratamiento> findByTipoTratamientoOrderByUrgenciaAndFechaInclusion(TipoTratamiento tipoTratamiento);
+
 }
