@@ -24,7 +24,9 @@
     </jstl:when>
 </jstl:choose>
 
-    
+ <!-- Botón para ver los donantes compatibles con el paciente -->
+    <acme:button code="administrator.paciente.form.button.viewCompatibleDonantes" 
+                 action="/administrator/paciente/compatibles?grupoSanguineo=${paciente.grupoSanguineo}" />
     
 </acme:form>
 

@@ -42,9 +42,4 @@ public class Paciente extends AbstractRole {
 
 	protected boolean			draftMode;
 
-	//@OneToMany(cascade = {
-	//CascadeType.REMOVE, CascadeType.REFRESH
-	//})
-	//protected Collection<Tratamiento>	tratamientos;
-
 }

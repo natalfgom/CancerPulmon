@@ -146,8 +146,6 @@ public class AdmnistratorDonanteCreateService extends AbstractService<Administra
 
 		// Crea una nueva instancia de Donante con valores iniciales por defecto.
 		object = new Donante();
-		// Establece el estado de "draftMode" (modo borrador) del paciente en true.
-		object.setDraftMode(true);
 
 		// Coloca el objeto en el buffer para su uso en la vista.
 		super.getBuffer().setData(object);

@@ -47,5 +47,4 @@ public class Donante extends AbstractEntity {
 	@NotNull
 	protected Date				fechaExtraccion;
 
-	protected boolean			draftMode;
 }

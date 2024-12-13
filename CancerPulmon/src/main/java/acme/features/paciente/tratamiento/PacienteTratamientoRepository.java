@@ -13,7 +13,7 @@ import acme.framework.repositories.AbstractRepository;
 @Repository
 public interface PacienteTratamientoRepository extends AbstractRepository {
 
-	@Query("SELECT t FROM Tratamiento t WHERE t.paciente.id = :pacienteId AND t.tipoTratamiento = :tipoTratamiento ORDER BY " + "CASE t.urgencia " + "WHEN 'Alta' THEN 1 " + "WHEN 'Media' THEN 2 " + "WHEN 'Baja' THEN 3 " + "END")
-	List<Tratamiento> findByPacienteIdAndTipoTratamientoOrderByUrgenciaAndFechaInclusion(int pacienteId, TipoTratamiento tipoTratamiento);
+	@Query("SELECT t FROM Tratamiento t WHERE t.tipoTratamiento = :tipoTratamiento ORDER BY " + "CASE t.urgencia " + "WHEN 'Alta' THEN 1 " + "WHEN 'Media' THEN 2 " + "WHEN 'Baja' THEN 3 " + "END")
+	List<Tratamiento> findByTipoTratamientoOrderByUrgencia(TipoTratamiento tipoTratamiento);
 
 }

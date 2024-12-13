@@ -84,22 +84,12 @@ public class OncologoTratamientoCreateService extends AbstractService<Oncologo, 
 		// Desvinculamos el tratamiento para enviarlo a la vista
 		final Tuple tuple = super.unbind(object, "tipoTratamiento", "estadoTratamiento", "urgencia");
 
-		if (object.getPaciente() != null) {
-			tuple.put("nuhsa", object.getPaciente().getNuhsa());
-			tuple.put("name", object.getPaciente().getName());
-			tuple.put("surname", object.getPaciente().getSurname());
-			tuple.put("genero", object.getPaciente().getGenero());
-			tuple.put("fechaNacimiento", object.getPaciente().getFechaNacimiento());
-			tuple.put("grupoSanguineo", object.getPaciente().getGrupoSanguineo());
-		} else {
-
-			tuple.put("nuhsa", "No disponible");
-			tuple.put("name", "No disponible");
-			tuple.put("surname", "No disponible");
-			tuple.put("genero", "No disponible");
-			tuple.put("fechaNacimiento", "No disponible");
-			tuple.put("grupoSanguineo", "No disponible");
-		}
+		tuple.put("nuhsa", object.getPaciente().getNuhsa());
+		tuple.put("name", object.getPaciente().getName());
+		tuple.put("surname", object.getPaciente().getSurname());
+		tuple.put("genero", object.getPaciente().getGenero());
+		tuple.put("fechaNacimiento", object.getPaciente().getFechaNacimiento());
+		tuple.put("grupoSanguineo", object.getPaciente().getGrupoSanguineo());
 
 		// Pasamos el ID del paciente al modelo para la vista
 		tuple.put("pacienteId", object.getPaciente().getId());

@@ -2,6 +2,7 @@
 package acme.features.paciente.tratamiento;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -36,19 +37,22 @@ public class PacienteTratamientoList extends AbstractService<Paciente, Tratamien
 
 	@Override
 	public void load() {
-		List<Tratamiento> objects;
+		List<Tratamiento> allTreatments;
 
 		final TipoTratamiento tipo = TipoTratamiento.TRASPLANTE;
-
 		final int userId = super.getRequest().getPrincipal().getActiveRoleId();
 
-		objects = this.repository.findByPacienteIdAndTipoTratamientoOrderByUrgenciaAndFechaInclusion(userId, tipo);
+		// Obtiene todos los tratamientos del tipo solicitado, ordenados globalmente por urgencia
+		allTreatments = this.repository.findByTipoTratamientoOrderByUrgencia(tipo);
 
-		// Asigna el orden dinámicamente
-		for (int i = 0; i < objects.size(); i++) {
-			final Tratamiento tratamiento = objects.get(i);
-			tratamiento.setOrden(i + 1); // Asigna el orden comenzando desde 1
+		// Asigna el orden dinámico globalmente
+		for (int i = 0; i < allTreatments.size(); i++) {
+			final Tratamiento tratamiento = allTreatments.get(i);
+			tratamiento.setOrden(i + 1); // Asigna el orden comenzando 1
 		}
+
+		// Filtra por el paciente actual
+		final List<Tratamiento> objects = allTreatments.stream().filter(tratamiento -> tratamiento.getPaciente() != null && tratamiento.getPaciente().getId() == userId).collect(Collectors.toList());
 
 		super.getBuffer().setData(objects);
 	}

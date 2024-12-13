@@ -75,7 +75,6 @@ public class OncologoTratamientoDeleteService extends AbstractService<Oncologo, 
 	public void unbind(final Tratamiento tratamiento) {
 		assert tratamiento != null;
 
-		// No es necesario unbind ya que estamos eliminando el Donante, pero si necesitas enviar datos puedes hacerlo aquí
 		final Tuple tuple = super.unbind(tratamiento, "tipoTratamiento", "estadoTratamiento", "urgencia");
 
 		super.getResponse().setData(tuple);

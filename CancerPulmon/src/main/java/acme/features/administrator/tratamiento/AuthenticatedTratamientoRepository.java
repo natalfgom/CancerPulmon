@@ -7,6 +7,7 @@ import java.util.List;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
+import acme.entities.donante.Donante;
 import acme.entities.tratamiento.TipoTratamiento;
 import acme.entities.tratamiento.Tratamiento;
 import acme.framework.repositories.AbstractRepository;
@@ -30,4 +31,11 @@ public interface AuthenticatedTratamientoRepository extends AbstractRepository {
 	@Query("SELECT t FROM Tratamiento t WHERE t.tipoTratamiento = :tipoTratamiento ORDER BY " + "CASE t.urgencia " + "WHEN 'Alta' THEN 1 " + "WHEN 'Media' THEN 2 " + "WHEN 'Baja' THEN 3 " + "END")
 	List<Tratamiento> findByTipoTratamientoOrderByUrgenciaAndFechaInclusion(TipoTratamiento tipoTratamiento);
 
+	// Consulta para obtener un tratamiento por su ID
+	@Query("SELECT t FROM Tratamiento t WHERE t.id = :id")
+	Tratamiento findTratamientoById(int id);
+
+	// Consulta para obtener los donantes compatibles según el grupo sanguíneo
+	@Query("SELECT d FROM Donante d WHERE d.grupoSanguineo = :grupoSanguineo")
+	List<Donante> findDonantesByGrupoSanguineo(String grupoSanguineo);
 }

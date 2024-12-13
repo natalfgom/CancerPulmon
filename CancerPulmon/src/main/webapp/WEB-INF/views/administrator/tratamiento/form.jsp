@@ -27,5 +27,10 @@
     <acme:input-textbox code="authenticated.tratamiento.form.label.paciente.genero" path="genero" />
     <acme:input-textbox code="authenticated.tratamiento.form.label.paciente.fechaNacimiento" path="fechaNacimiento" />
     <acme:input-textbox code="authenticated.tratamiento.form.label.paciente.grupoSanguineo" path="grupoSanguineo" />
+    
+    <!-- Botón para acceder a la lista de donantes compatibles -->
+    <acme:button code="authenticated.tratamiento.form.button.donantesCompatibles" 
+                 action="/administrator/donante/list-compatible-donors?tratamientoId=${tratamientoId}"/>
+
 </acme:form>
  
