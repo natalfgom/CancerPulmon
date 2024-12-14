@@ -7,7 +7,7 @@
 
     <acme:input-textbox code="authenticated.tratamiento.form.label.estadoTratamiento" path="estadoTratamiento"/>  
 	<acme:input-textbox code="authenticated.tratamiento.form.label.tipoTratamiento" path="tipoTratamiento" />
-		<acme:input-textbox code="authenticated.tratamiento.list.label.paciente.orden" path="orden"/>    
+		<acme:input-textbox code="authenticated.tratamiento.list.label.paciente.orden" path="orden" readonly="true"/>    
     <acme:input-textbox code="authenticated.tratamiento.list.label.paciente.urgencia" path="urgencia"/>    
     <acme:input-textbox code="authenticated.tratamiento.form.label.paciente.nuhsa" path="nuhsa" readonly="true"/>
     <acme:input-textbox code="authenticated.tratamiento.form.label.paciente.name" path="name" readonly="true"/>

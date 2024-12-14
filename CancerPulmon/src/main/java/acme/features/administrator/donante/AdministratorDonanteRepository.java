@@ -3,8 +3,6 @@ package acme.features.administrator.donante;
 
 import java.util.List;
 
-import javax.validation.constraints.NotNull;
-
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
@@ -27,7 +25,7 @@ public interface AdministratorDonanteRepository extends AbstractRepository {
 	Tratamiento findTratamientoById(int id);
 
 	@Query("SELECT d FROM Donante d WHERE d.grupoSanguineo = :grupoSanguineo")
-	List<Donante> findDonantesByGrupoSanguineo(@NotNull GrupoSanguineo grupoSanguineo);
+	List<Donante> findDonantesByGrupoSanguineo(GrupoSanguineo grupoSanguineo);
 
 	@Query("select d from Donante d where d.grupoSanguineo = :grupoSanguineo")
 	List<Donante> findCompatibleDonantes(GrupoSanguineo grupoSanguineo);

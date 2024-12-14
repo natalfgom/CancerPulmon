@@ -52,6 +52,10 @@ master.menu.user-account.become-consumer = Hazte consumidor
 master.menu.authenticated.paciente.list = Lista Pacientes
 master.menu.authenticated = Listas
 
+
+master.menu.paciente.listae = Lista de Espera
+master.menu.paciente.espera = Acciones
+
 #Tratamientos
 master.menu.authenticated.tratamiento.list = Lista Tratamientos
 

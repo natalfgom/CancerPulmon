@@ -14,3 +14,4 @@ authenticated.tratamiento.form.label.paciente.grupoSanguineo = Grupo Sanguíneo
 master.menu.oncologo.tratamiento.list = Editar Tratamientos
 oncologo.tratamiento.form.button.update = Guardar Cambios
 oncologo.tratamiento.form.button.delete = Eliminar Tratamiento
+authenticated.tratamiento.list.label.paciente.urgencia = Urgencia

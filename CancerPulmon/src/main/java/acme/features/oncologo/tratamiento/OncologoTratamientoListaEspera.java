@@ -6,6 +6,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.entities.tratamiento.EstadoTratamiento;
 import acme.entities.tratamiento.TipoTratamiento;
 import acme.entities.tratamiento.Tratamiento;
 import acme.framework.components.models.Tuple;
@@ -38,8 +39,9 @@ public class OncologoTratamientoListaEspera extends AbstractService<Oncologo, Tr
 		List<Tratamiento> objects;
 
 		final TipoTratamiento tipo = TipoTratamiento.TRASPLANTE;
+		final EstadoTratamiento estado = EstadoTratamiento.PENDIENTE;
 
-		objects = this.repository.findByTipoTratamientoOrderByUrgenciaAndFechaInclusion(tipo);
+		objects = this.repository.findByTipoTratamientoAndEstadoOrderByUrgenciaAndFechaInclusion(tipo, estado);
 
 		// Asigna el orden dinámicamente
 		for (int i = 0; i < objects.size(); i++) {

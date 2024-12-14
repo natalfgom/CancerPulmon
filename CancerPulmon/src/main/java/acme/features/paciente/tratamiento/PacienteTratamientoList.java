@@ -7,6 +7,7 @@ import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.entities.tratamiento.EstadoTratamiento;
 import acme.entities.tratamiento.TipoTratamiento;
 import acme.entities.tratamiento.Tratamiento;
 import acme.framework.components.models.Tuple;
@@ -40,10 +41,11 @@ public class PacienteTratamientoList extends AbstractService<Paciente, Tratamien
 		List<Tratamiento> allTreatments;
 
 		final TipoTratamiento tipo = TipoTratamiento.TRASPLANTE;
+		final EstadoTratamiento estado = EstadoTratamiento.PENDIENTE;
 		final int userId = super.getRequest().getPrincipal().getActiveRoleId();
 
 		// Obtiene todos los tratamientos del tipo solicitado, ordenados globalmente por urgencia
-		allTreatments = this.repository.findByTipoTratamientoOrderByUrgencia(tipo);
+		allTreatments = this.repository.findByTipoTratamientoAndEstadoOrderByUrgenciaAndFechaInclusion(tipo, estado);
 
 		// Asigna el orden dinámico globalmente
 		for (int i = 0; i < allTreatments.size(); i++) {

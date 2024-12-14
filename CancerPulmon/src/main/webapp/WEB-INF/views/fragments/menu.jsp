@@ -1,164 +1,53 @@
-<%--
-- menu.jsp
--
-- Copyright (C) 2012-2023 Rafael Corchuelo.
--
-- In keeping with the traditional purpose of furthering education and research, it is
-- the policy of the copyright owner to permit non-commercial use and redistribution of
-- this software. It has been tested carefully, but it is not guaranteed for any particular
-- purposes.  The copyright owner does not offer any warranties or representations, nor do
-- they accept any liabilities with respect to them.
---%>
-
-<%-- <%@page language="java"%> --%>
-
-<%-- <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%> --%>
-<%-- <%@taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles"%> --%>
-<%-- <%@taglib prefix="acme" uri="http://www.the-acme-framework.org/"%> --%>
-
-<%-- <acme:menu-bar code="master.menu.home"> --%>
-<%-- 	<acme:menu-left> --%>
-<%-- 		<acme:menu-option code="master.menu.anonymous" access="isAnonymous()"> --%>
-<%-- 			<acme:menu-suboption code="master.menu.anonymous.favourite-link" action="http://www.example.com/"/> --%>
-<%-- 		</acme:menu-option> --%>
-		
-<%-- 		<acme:menu-option code="master.menu.authenticated" access="isAuthenticated()"> --%>
-<%-- <%--     		<acme:menu-suboption code="master.menu.authenticated.paciente.list" action="/authenticated/paciente/list"/> --%> --%>
-<%--     		<acme:menu-suboption code="master.menu.authenticated.tratamiento.list" action="/authenticated/tratamiento/list"/> --%>
-<%--     		<acme:menu-suboption code="master.menu.authenticated.donante.list" action="/authenticated/donante/list"/> --%>
-<%--     		<acme:menu-suboption code="master.menu.authenticated.listae" action="/authenticated/tratamiento/list-all"/> --%>
-<!--     		<acme:menu-separator/>
-<!--     		<acme:menu-suboption code="master.menu.authenticated.money-exchange" action="/authenticated/money-exchange/perform"/> --> -->
-<!--     		<acme:menu-separator/>
-<!--     		<acme:menu-suboption code="master.menu.authenticated.profile" action="/authenticated/profile/show"/> --> -->
-<!--     		<acme:menu-suboption code="master.menu.authenticated.applications" action="/authenticated/application/list"/> -->
-<%-- 		</acme:menu-option> --%>
-		
-
-<%-- 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')"> --%>
-<%-- 			<acme:menu-suboption code="master.menu.administrator.user-accounts" action="/administrator/user-account/list"/> --%>
-<%--     		<acme:menu-suboption code="master.menu.administrator.donante.list" action="/administrator/donante/list"/> --%>
-<%--     		<acme:menu-suboption code="master.menu.administrator.paciente.list" action="/administrator/paciente/list"/> --%>
-<%--     		<acme:menu-separator/> --%>
-<%--   		  <acme:menu-suboption code="master.menu.administrator.donante.create.button" action="/administrator/donante/create"/> --%>
-<%-- 			<acme:menu-separator/> --%>
-<%-- 			<acme:menu-suboption code="master.menu.administrator.populate-initial" action="/administrator/populate-initial"/> --%>
-<%-- 			<acme:menu-suboption code="master.menu.administrator.populate-sample" action="/administrator/populate-sample"/>			 --%>
-<%-- 			<acme:menu-separator/> --%>
-<%-- 			<acme:menu-suboption code="master.menu.administrator.shut-down" action="/administrator/shut-down"/> --%>
-<%-- 		</acme:menu-option> --%>
-		
-<%-- 			<acme:menu-option code="master.menu.oncologo" access="hasRole('Oncologo')"> --%>
-<%--     		<acme:menu-suboption code="master.menu.oncologo.tratamiento.list" action="/oncologo/tratamiento/list" /> --%>
-<%--     		<acme:menu-suboption code="master.menu.oncologo.paciente.list" action="/oncologo/paciente/list" />    		 --%>
-<%-- 		</acme:menu-option> --%>
-
-<%-- 		<acme:menu-option code="master.menu.provider" access="hasRole('Provider')"> --%>
-<%-- 			<acme:menu-suboption code="master.menu.provider.favourite-link" action="http://www.example.com/"/> --%>
-<%-- 		</acme:menu-option> --%>
-
-<%-- 		<acme:menu-option code="master.menu.consumer" access="hasRole('Consumer')"> --%>
-<%-- 			<acme:menu-suboption code="master.menu.consumer.favourite-link" action="http://www.example.com/"/> --%>
-<%-- 		</acme:menu-option> --%>
-<%-- 	</acme:menu-left> --%>
-
-<%-- 	<acme:menu-right> --%>
-<%-- 		<acme:menu-option code="master.menu.sign-up" action="/anonymous/user-account/create" access="isAnonymous()"/> --%>
-<%-- 		<acme:menu-option code="master.menu.sign-in" action="/master/sign-in" access="isAnonymous()"/> --%>
-
-<%-- 		<acme:menu-option code="master.menu.user-account" access="isAuthenticated()"> --%>
-<%-- 			<acme:menu-suboption code="master.menu.user-account.general-data" action="/authenticated/user-account/update"/> --%>
-<!-- <!--			<acme:menu-suboption code="master.menu.user-account.become-provider" action="/authenticated/provider/create" access="!hasRole('Provider')"/>  --> -->
-<%-- 			<acme:menu-suboption code="master.menu.user-account.provider" action="/authenticated/provider/update" access="hasRole('Provider')"/> --%>
-<!-- <!--			<acme:menu-suboption code="master.menu.user-account.become-consumer" action="/authenticated/consumer/create" access="!hasRole('Consumer')"/>  --> -->
-<%-- 			<acme:menu-suboption code="master.menu.user-account.consumer" action="/authenticated/consumer/update" access="hasRole('Consumer')"/> --%>
-<%-- 		</acme:menu-option> --%>
-
-<%-- 		<acme:menu-option code="master.menu.sign-out" action="/master/sign-out" access="isAuthenticated()"/> --%>
-<%-- 	</acme:menu-right> --%>
-<%-- </acme:menu-bar> --%>
-
-
-<%--
-- menu.jsp
--
-- Copyright (C) 2012-2023 Rafael Corchuelo.
--
-- In keeping with the traditional purpose of furthering education and research, it is
-- the policy of the copyright owner to permit non-commercial use and redistribution of
-- this software. It has been tested carefully, but it is not guaranteed for any particular
-- purposes.  The copyright owner does not offer any warranties or representations, nor do
-- they accept any liabilities with respect to them.
---%>
-
-<%--
-- menu.jsp alternativo con tres desplegables alineados horizontalmente
---%>
 
 <%@page language="java"%>
-
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles"%>
 <%@taglib prefix="acme" uri="http://www.the-acme-framework.org/"%>
 
 <acme:menu-bar code="master.menu.home">
-    <acme:menu-left >
-    
-<!--     Aministrador -->
-
-        <%-- Desplegable para Gestión de Tratamientos / LE --%>
+    <acme:menu-left>
+        <!-- Administrador -->
         <acme:menu-option code="master.menu.administrator.ttos" access="hasRole('Administrator')">
-		<acme:menu-suboption code="master.menu.administrator.listae" action="/administrator/tratamiento/list-all"/> 
-		<acme:menu-suboption code="master.menu.administrator.tratamiento.list" action="/administrator/tratamiento/list"/>
- 		</acme:menu-option>
+            <acme:menu-suboption code="master.menu.administrator.listae" action="/administrator/tratamiento/list-all"/> 
+            <acme:menu-suboption code="master.menu.administrator.tratamiento.list" action="/administrator/tratamiento/list"/>
+        </acme:menu-option>
 
-        <%-- Desplegable para Gestión de Donantes --%>
         <acme:menu-option code="master.menu.administrator.donantes" access="hasRole('Administrator')">
-         <acme:menu-suboption code="master.menu.administrator.donante.list" action="/administrator/donante/list" />
-         <acme:menu-suboption code="master.menu.administrator.donante.create" action="/administrator/donante/create" />
+            <acme:menu-suboption code="master.menu.administrator.donante.list" action="/administrator/donante/list"/>
+            <acme:menu-suboption code="master.menu.administrator.donante.create" action="/administrator/donante/create"/>
         </acme:menu-option>
 
-        <%-- Desplegable para Gestión de Pacientes --%>
         <acme:menu-option code="master.menu.administrator.pacientes" access="hasRole('Administrator')">
-        <acme:menu-suboption code="master.menu.administrator.paciente.list" action="/administrator/paciente/list" />
-        <acme:menu-suboption code="master.menu.administrator.paciente.create" action="/administrator/paciente/create" />
+            <acme:menu-suboption code="master.menu.administrator.paciente.list" action="/administrator/paciente/list"/>
+            <acme:menu-suboption code="master.menu.administrator.paciente.create" action="/administrator/paciente/create"/>
         </acme:menu-option>
-        
-                <%-- Desplegable para Gestión de Usuarios --%>
-         <acme:menu-option code="master.menu.administrator.config" access="hasRole('Administrator')">
-        <acme:menu-suboption code="master.menu.administrator.user-accounts" action="/administrator/user-account/list"/> --%>
-     	<acme:menu-suboption code="master.menu.administrator.populate-sample" action="/administrator/populate-sample"/>			 --%>
-		<acme:menu-separator/> 
-		<acme:menu-suboption code="master.menu.administrator.shut-down" action="/administrator/shut-down"/> 
-      	</acme:menu-option>
-    	</acme:menu-left>
-    	
-    	
-    	<!--     Oncologo -->
 
-        <%-- Desplegable para Gestión de Tratamientos --%>
+        <acme:menu-option code="master.menu.administrator.config" access="hasRole('Administrator')">
+            <acme:menu-suboption code="master.menu.administrator.user-accounts" action="/administrator/user-account/list"/>
+            <acme:menu-suboption code="master.menu.administrator.populate-sample" action="/administrator/populate-sample"/>
+            <acme:menu-separator/>
+            <acme:menu-suboption code="master.menu.administrator.shut-down" action="/administrator/shut-down"/>
+        </acme:menu-option>
+
+        <!-- Oncologo -->
         <acme:menu-option code="master.menu.oncologo.ttos" access="hasRole('Oncologo')">
-		<acme:menu-suboption code="master.menu.oncologo.listae" action="/oncologo/tratamiento/list-all"/> 
-		<acme:menu-suboption code="master.menu.oncologo.tratamiento.list" action="/oncologo/tratamiento/list"/>
- 		</acme:menu-option>
-
-        <%-- Desplegable para Gestión de Donantes --%>
-        <acme:menu-option code="master.menu.oncologo.donantes" access="hasRole('Oncologo')">
-         <acme:menu-suboption code="master.menu.oncologo.donante.list" action="/oncologo/donante/list" />
-	        </acme:menu-option>
-
-        <%-- Desplegable para Gestión de Pacientes --%>
-        <acme:menu-option code="master.menu.oncologo.pacientes" access="hasRole('Oncologo')">
-        <acme:menu-suboption code="master.menu.oncologo.paciente.list" action="/oncologo/paciente/list" />
+            <acme:menu-suboption code="master.menu.oncologo.listae" action="/oncologo/tratamiento/list-all"/> 
+            <acme:menu-suboption code="master.menu.oncologo.tratamiento.list" action="/oncologo/tratamiento/list"/>
         </acme:menu-option>
-        
-        <!--     Paciente -->
 
-        <%-- Desplegable para Gestión de Tratamientos --%>
+        <acme:menu-option code="master.menu.oncologo.donantes" access="hasRole('Oncologo')">
+            <acme:menu-suboption code="master.menu.oncologo.donante.list" action="/oncologo/donante/list"/>
+        </acme:menu-option>
+
+        <acme:menu-option code="master.menu.oncologo.pacientes" access="hasRole('Oncologo')">
+            <acme:menu-suboption code="master.menu.oncologo.paciente.list" action="/oncologo/paciente/list"/>
+        </acme:menu-option>
+
+        <!-- Paciente -->
         <acme:menu-option code="master.menu.paciente.espera" access="hasRole('Paciente')">
-		<acme:menu-suboption code="master.menu.oncologo.listae" action="/paciente/tratamiento/list"/> 
-		
- 		</acme:menu-option>
+            <acme:menu-suboption code="master.menu.paciente.listae" action="/paciente/tratamiento/list"/>
+        </acme:menu-option>
+    </acme:menu-left>
 
     <acme:menu-right>
         <acme:menu-option code="master.menu.sign-up" action="/anonymous/user-account/create" access="isAnonymous()"/>
@@ -166,5 +55,3 @@
         <acme:menu-option code="master.menu.sign-out" action="/master/sign-out" access="isAuthenticated()"/>
     </acme:menu-right>
 </acme:menu-bar>
-
-

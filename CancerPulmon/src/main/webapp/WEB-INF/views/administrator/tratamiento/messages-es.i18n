@@ -10,3 +10,5 @@ authenticated.tratamiento.form.label.paciente.surname = Apellidos
 authenticated.tratamiento.form.label.paciente.genero = Género
 authenticated.tratamiento.form.label.paciente.fechaNacimiento = Fecha Nacimiento
 authenticated.tratamiento.form.label.paciente.grupoSanguineo = Grupo Sanguíneo
+authenticated.tratamiento.list.label.paciente.orden = Orden
+authenticated.tratamiento.list.label.paciente.urgencia = Urgencia
