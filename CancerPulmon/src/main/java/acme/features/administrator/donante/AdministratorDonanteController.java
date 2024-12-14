@@ -30,7 +30,7 @@ public class AdministratorDonanteController extends AbstractController<Administr
 	@Autowired
 	protected AdmnistratorDonanteCreateService	createService;
 
-	// Constructors -----------------------------------------------------------
+	// Constructors -------------------------------------------------------
 
 
 	@PostConstruct
