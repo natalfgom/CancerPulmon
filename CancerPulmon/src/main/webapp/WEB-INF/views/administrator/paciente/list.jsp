@@ -8,5 +8,3 @@
     <acme:list-column code="administrator.paciente.list.label.surname" path="surname" width=""/>
 </acme:list>
 
-<acme:button code="administrator.paciente.list.button.create" action="/administrator/paciente/create"/>
-

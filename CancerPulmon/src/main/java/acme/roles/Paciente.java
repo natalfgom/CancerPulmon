@@ -40,6 +40,4 @@ public class Paciente extends AbstractRole {
 	@NotNull
 	protected Date				fechaNacimiento;
 
-	protected boolean			draftMode;
-
 }

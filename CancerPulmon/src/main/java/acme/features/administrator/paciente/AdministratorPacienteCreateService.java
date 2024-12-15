@@ -32,9 +32,6 @@ public class AdministratorPacienteCreateService extends AbstractService<Administ
 		// Crea una nueva instancia de la entidad Paciente.
 		object = new Paciente();
 
-		// Establece el estado de "draftMode" (modo borrador) del paciente en true.
-		object.setDraftMode(true);
-
 		// Coloca el objeto paciente creado en el buffer, para que esté disponible en la respuesta o el modelo.
 		super.getBuffer().setData(object);
 	}
