@@ -2,18 +2,18 @@
 #
 # Copyright (C) 2012-2023 Rafael Corchuelo.
 #
-# In keeping with the traditional purpose of furthering education and research, it is
-# the policy of the copyright owner to permit non-commercial use and redistribution of
-# this software. It has been tested carefully, but it is not guaranteed for any particular
-# purposes.  The copyright owner does not offer any warranties or representations, nor do
-# they accept any liabilities with respect to them.
+# De acuerdo con el propósito tradicional de promover la educación y la investigación, es
+# política del propietario de los derechos de autor permitir el uso y la redistribución no comercial de
+# este software. Ha sido probado cuidadosamente, pero no se garantiza para ningún propósito en particular.
+# El propietario de los derechos de autor no ofrece ninguna garantía ni representación, ni
+# acepta ninguna responsabilidad con respecto a ellos.
 
-﻿# master.menu #################################################################
+# master.menu #################################################################
 
 master.menu.home = Inicio
 master.menu.sign-up = Registrarse
-master.menu.sign-in = Entrar
-master.menu.sign-out = Salir
+master.menu.sign-in = Iniciar sesión
+master.menu.sign-out = Cerrar sesión
 
 # master.menu.anonymous #######################################################
 
@@ -21,20 +21,20 @@ master.menu.anonymous = Anónimo
 master.menu.anonymous.favourite-link = Enlace favorito
 
 # master.menu.administrator ###################################################
-   
+
 master.menu.administrator = Administrador
-master.menu.administrator.dashboard = Panel de indicadores
+master.menu.administrator.dashboard = Panel de control
 master.menu.administrator.user-accounts = Cuentas de usuario
 master.menu.administrator.populate-initial = Poblar BD (inicial)
-master.menu.administrator.populate-sample = Poblar BD (ejemplos)
-master.menu.administrator.shut-down = Parar el sistema
+master.menu.administrator.populate-sample = Poblar BD (muestras)
+master.menu.administrator.shut-down = Apagar
 
 # master.menu.provider ########################################################
 
 master.menu.provider = Proveedor
 master.menu.provider.favourite-link = Enlace favorito
 
-# master.menu.consumer ##########################################################
+# master.menu.consumer ########################################################
 
 master.menu.consumer = Consumidor
 master.menu.consumer.favourite-link = Enlace favorito
@@ -43,21 +43,38 @@ master.menu.consumer.favourite-link = Enlace favorito
 
 master.menu.user-account = Cuenta
 master.menu.user-account.general-data = Datos generales
-master.menu.user-account.provider = Datos de proveedor
-master.menu.user-account.become-provider = Hazte proveedor
-master.menu.user-account.consumer = Datos de consumidor
-master.menu.user-account.become-consumer = Hazte consumidor
+master.menu.user-account.provider = Datos del proveedor
+master.menu.user-account.become-provider = Convertirse en proveedor
+master.menu.user-account.consumer = Datos del consumidor
+master.menu.user-account.become-consumer = Convertirse en consumidor
 
-#Pacientes
-master.menu.authenticated.paciente.list = Lista Pacientes
-master.menu.authenticated = Listas
-
-
-master.menu.paciente.listae = Lista de Espera
+#### Administrador ####
+master.menu.administrator.config = Configuración
+# Donante 
+master.menu.administrator.donantes = Donantes
+master.menu.administrator.donante.list = Donantes disponibles
+master.menu.administrator.donante.create = Crear donante
+# Tratamiento
+master.menu.administrator.ttos = Tratamientos
+master.menu.administrator.listae = Lista de espera
+master.menu.administrator.tratamiento.list = Tratamientos
+# Pacientes
+master.menu.administrator.pacientes = Pacientes
+master.menu.administrator.paciente.list = Lista de pacientes
+master.menu.administrator.paciente.create = Crear paciente
+master.menu.paciente.listae = Lista de espera
 master.menu.paciente.espera = Acciones
 
-#Tratamientos
-master.menu.authenticated.tratamiento.list = Lista Tratamientos
+### Oncólogo ###
+# Tratamientos 
+master.menu.oncologo.ttos = Tratamientos
+master.menu.oncologo.listae = Lista de espera
+master.menu.oncologo.tratamiento.list = Tratamientos
 
-#Tratamiento
-master.menu.authenticated.donante.list =  Donantes Disponibles
+# Donantes
+master.menu.oncologo.donantes = Donantes
+master.menu.oncologo.donante.list = Donantes disponibles
+
+# Pacientes
+master.menu.oncologo.pacientes = Pacientes
+master.menu.oncologo.paciente.list = Lista de pacientes
