@@ -1,0 +1,13 @@
+administrator.paciente.list.label.nuhsa = NUHSA
+administrator.paciente.list.label.name = Nombre
+administrator.paciente.list.label.surname = Apellidos
+	
+administrator.paciente.form.label.nuhsa = NUHSA
+administrator.paciente.form.label.name = Nombre
+administrator.paciente.form.label.surname = Apellidos
+administrator.paciente.form.label.genero = Género
+administrator.paciente.form.label.grupoSanguineo  = Grupo Sanguíneo
+administrator.paciente.form.label.fechaNacimiento = Fecha Nacimiento
+
+administrator.paciente.form.button.update = Editar Paciente
+administrator.paciente.form.button.delete = Eliminar Paciente
