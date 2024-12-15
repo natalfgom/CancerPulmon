@@ -19,7 +19,6 @@
 
         <acme:menu-option code="master.menu.administrator.pacientes" access="hasRole('Administrator')">
             <acme:menu-suboption code="master.menu.administrator.paciente.list" action="/administrator/paciente/list"/>
-            <acme:menu-suboption code="master.menu.administrator.paciente.create" action="/administrator/paciente/create"/>
         </acme:menu-option>
 
         <acme:menu-option code="master.menu.administrator.config" access="hasRole('Administrator')">

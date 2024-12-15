@@ -4,6 +4,7 @@ package acme.features.oncologo.tratamiento;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.entities.tratamiento.EstadoTratamiento;
 import acme.entities.tratamiento.Tratamiento;
 import acme.framework.components.models.Tuple;
 import acme.framework.services.AbstractService;
@@ -37,7 +38,7 @@ public class OncologoTratamientoUpdateService extends AbstractService<Oncologo, 
 
 		tratamientoId = super.getRequest().getData("id", int.class);
 		tratamiento = this.repository.findOneTratamientotById(tratamientoId);
-		status = tratamiento != null && super.getRequest().getPrincipal().hasRole(Oncologo.class);
+		status = tratamiento != null && super.getRequest().getPrincipal().hasRole(Oncologo.class) && tratamiento.getEstadoTratamiento() != EstadoTratamiento.FINALIZADO;
 
 		super.getResponse().setAuthorised(status);
 	}
