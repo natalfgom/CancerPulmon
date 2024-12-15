@@ -29,6 +29,7 @@ public interface OncologoTratamientoRepository extends AbstractRepository {
 	@Query("select p from Paciente p where p.id = :id")
 	Paciente findOnePacienteById(int id);
 
-	@Query("SELECT t FROM Tratamiento t WHERE t.tipoTratamiento = :tipoTratamiento AND t.estadoTratamiento = :estadoTratamiento ORDER BY " + "CASE t.urgencia " + "WHEN 'Alta' THEN 1 " + "WHEN 'Media' THEN 2 " + "WHEN 'Baja' THEN 3 " + "END")
+	@Query("SELECT t FROM Tratamiento t WHERE t.tipoTratamiento = :tipoTratamiento AND t.estadoTratamiento = :estadoTratamiento " + "ORDER BY CASE t.urgencia " + "WHEN 'Alta' THEN 1 " + "WHEN 'Media' THEN 2 " + "WHEN 'Baja' THEN 3 "
+		+ "END, t.fechaInclusion ASC")
 	List<Tratamiento> findByTipoTratamientoAndEstadoOrderByUrgenciaAndFechaInclusion(TipoTratamiento tipoTratamiento, EstadoTratamiento estadoTratamiento);
 }

@@ -9,5 +9,7 @@
 	<acme:list-column code="authenticated.tratamiento.list.label.estadoTratamiento" path="estadoTratamiento" width="10%"/>
 	 <acme:list-column code="authenticated.tratamiento.list.label.paciente.nuhsa" path="nuhsa" width="20%"/>
 	 <acme:list-column code="authenticated.tratamiento.list.label.paciente.urgencia" path="urgencia" width="20%"/>
+	 <acme:list-column code="authenticated.tratamiento.list.label.FECHA" path="fechaInclusion" width="20%"/>
+	 
 	 
 </acme:list>

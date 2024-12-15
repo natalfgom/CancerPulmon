@@ -72,24 +72,14 @@ public class OncologoTratamientoShowService extends AbstractService<Oncologo, Tr
 
 		Tuple tuple;
 
-		tuple = super.unbind(object, "tipoTratamiento", "estadoTratamiento", "urgencia");
+		tuple = super.unbind(object, "tipoTratamiento", "estadoTratamiento", "urgencia", "fechaInclusion");
 
-		if (object.getPaciente() != null) {
-			tuple.put("nuhsa", object.getPaciente().getNuhsa());
-			tuple.put("name", object.getPaciente().getName());
-			tuple.put("surname", object.getPaciente().getSurname());
-			tuple.put("genero", object.getPaciente().getGenero());
-			tuple.put("fechaNacimiento", object.getPaciente().getFechaNacimiento());
-			tuple.put("grupoSanguineo", object.getPaciente().getGrupoSanguineo());
-		} else {
-
-			tuple.put("nuhsa", "No disponible");
-			tuple.put("name", "No disponible");
-			tuple.put("surname", "No disponible");
-			tuple.put("genero", "No disponible");
-			tuple.put("fechaNacimiento", "No disponible");
-			tuple.put("grupoSanguineo", "No disponible");
-		}
+		tuple.put("nuhsa", object.getPaciente().getNuhsa());
+		tuple.put("name", object.getPaciente().getName());
+		tuple.put("surname", object.getPaciente().getSurname());
+		tuple.put("genero", object.getPaciente().getGenero());
+		tuple.put("fechaNacimiento", object.getPaciente().getFechaNacimiento());
+		tuple.put("grupoSanguineo", object.getPaciente().getGrupoSanguineo());
 
 		super.getResponse().setData(tuple);
 	}

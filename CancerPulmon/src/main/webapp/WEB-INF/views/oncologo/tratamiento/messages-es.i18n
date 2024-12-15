@@ -17,3 +17,6 @@ oncologo.tratamiento.form.button.delete = Eliminar Tratamiento
 oncologo.tratamiento.form.button.update = Actualizar
 oncologo.tratamiento.form.button.delete = Borrar
 creardonante = Crear tratemiento
+
+authenticated.tratamiento.list.label.FECHA = Fecha de inclusión
+authenticated.tratamiento.form.label.fecha = Inclusion Date

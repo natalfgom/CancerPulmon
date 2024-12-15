@@ -1,22 +1,22 @@
-key,tipoTratamiento,estadoTratamiento,urgencia,key:paciente
-tratamiento-1,QUIMIOTERAPIA,EN_CURSO,Alta,paciente-01
-tratamiento-2,RADIOTERAPIA,FINALIZADO,Baja,paciente-02
-tratamiento-3,TRASPLANTE,PENDIENTE,Media,paciente-03
-tratamiento-4,CIRUGIA,EN_CURSO,Alta,paciente-04
-tratamiento-5,TRASPLANTE,FINALIZADO,Baja,paciente-05
-tratamiento-6,OTRO,PENDIENTE,Media,paciente-01
-tratamiento-7,TRASPLANTE,EN_CURSO,Alta,paciente-02
-tratamiento-8,RADIOTERAPIA,PENDIENTE,Baja,paciente-03
-tratamiento-9,CIRUGIA,FINALIZADO,Media,paciente-04
-tratamiento-10,INMUNOTERAPIA,EN_CURSO,Alta,paciente-05
-tratamiento-11,QUIMIOTERAPIA,EN_CURSO,Baja,paciente-10
-tratamiento-12,RADIOTERAPIA,FINALIZADO,Media,paciente-11
-tratamiento-13,TRASPLANTE,PENDIENTE,Alta,paciente-12
-tratamiento-14,CIRUGIA,EN_CURSO,Baja,paciente-13
-tratamiento-15,TRASPLANTE,FINALIZADO,Media,paciente-14
-tratamiento-16,OTRO,PENDIENTE,Alta,paciente-15
-tratamiento-17,TRASPLANTE,EN_CURSO,Baja,paciente-16
-tratamiento-18,RADIOTERAPIA,PENDIENTE,Media,paciente-17
-tratamiento-19,CIRUGIA,FINALIZADO,Alta,paciente-18
-tratamiento-20,INMUNOTERAPIA,EN_CURSO,Baja,paciente-19
-tratamiento-21,CIRUGIA,FINALIZADO,Media,paciente-20
+key,tipoTratamiento,estadoTratamiento,urgencia,key:paciente,fechaInclusion
+tratamiento-1,QUIMIOTERAPIA,EN_CURSO,Alta,paciente-01,2024/11/15 10:00
+tratamiento-2,RADIOTERAPIA,FINALIZADO,Baja,paciente-02,2023/05/20 08:30
+tratamiento-3,TRASPLANTE,PENDIENTE,Media,paciente-03,2024/01/10 14:45
+tratamiento-4,CIRUGIA,EN_CURSO,Alta,paciente-04,2024/09/05 11:30
+tratamiento-5,TRASPLANTE,FINALIZADO,Baja,paciente-05,2023/07/18 09:00
+tratamiento-6,OTRO,PENDIENTE,Media,paciente-01,2024/03/22 16:20
+tratamiento-7,TRASPLANTE,EN_CURSO,Alta,paciente-02,2024/12/01 07:50
+tratamiento-8,RADIOTERAPIA,PENDIENTE,Baja,paciente-03,2024/02/15 10:30
+tratamiento-9,CIRUGIA,FINALIZADO,Media,paciente-04,2023/10/05 14:00
+tratamiento-10,INMUNOTERAPIA,EN_CURSO,Alta,paciente-05,2024/06/12 12:10
+tratamiento-11,QUIMIOTERAPIA,EN_CURSO,Baja,paciente-10,2024/04/02 08:45
+tratamiento-12,RADIOTERAPIA,FINALIZADO,Media,paciente-11,2023/08/19 13:15
+tratamiento-13,TRASPLANTE,PENDIENTE,Alta,paciente-12,2024/05/14 15:00
+tratamiento-14,CIRUGIA,EN_CURSO,Baja,paciente-13,2024/07/07 11:40
+tratamiento-15,TRASPLANTE,FINALIZADO,Media,paciente-14,2023/12/20 09:25
+tratamiento-16,OTRO,PENDIENTE,Alta,paciente-15,2024/01/30 17:00
+tratamiento-17,TRASPLANTE,EN_CURSO,Baja,paciente-16,2024/03/12 09:50
+tratamiento-18,RADIOTERAPIA,PENDIENTE,Media,paciente-17,2024/06/28 10:05
+tratamiento-19,CIRUGIA,FINALIZADO,Alta,paciente-18,2023/04/11 07:55
+tratamiento-20,INMUNOTERAPIA,EN_CURSO,Baja,paciente-19,2024/10/10 13:30
+tratamiento-21,CIRUGIA,FINALIZADO,Media,paciente-20,2023/09/25 08:20

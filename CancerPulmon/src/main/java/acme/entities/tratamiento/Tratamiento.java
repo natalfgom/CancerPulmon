@@ -1,6 +1,8 @@
 
 package acme.entities.tratamiento;
 
+import java.util.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
@@ -38,8 +40,8 @@ public class Tratamiento extends AbstractEntity {
 
 	protected Urgencia			urgencia; //Alta, Baja o media
 
-	//	@NotNull
-	//	protected Date				fechaInclusion;
+	@NotNull
+	protected Date				fechaInclusion;
 
 	@Transient
 	private int					orden;

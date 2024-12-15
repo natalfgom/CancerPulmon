@@ -1,6 +1,8 @@
 
 package acme.features.oncologo.tratamiento;
 
+import java.util.Date;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -51,6 +53,10 @@ public class OncologoTratamientoCreateService extends AbstractService<Oncologo, 
 		object.setEstadoTratamiento(EstadoTratamiento.PENDIENTE); // Estado por defecto
 		object.setTipoTratamiento(TipoTratamiento.OTRO);
 
+		// Asignar la fecha actual
+		final Date now = new Date();  // Obtenemos la fecha y hora actual
+		object.setFechaInclusion(now);  // Asignamos la fecha actual al atributo fechaInclusion
+
 		// Colocamos el objeto en el buffer para que esté disponible en la vista
 		super.getBuffer().setData(object);
 	}
@@ -60,7 +66,7 @@ public class OncologoTratamientoCreateService extends AbstractService<Oncologo, 
 		assert object != null;
 
 		// Vinculamos los datos del formulario con los atributos del objeto tratamiento
-		super.bind(object, "tipoTratamiento", "estadoTratamiento", "urgencia");
+		super.bind(object, "tipoTratamiento", "estadoTratamiento", "urgencia", "fechaInclusion");
 	}
 
 	@Override
@@ -82,7 +88,9 @@ public class OncologoTratamientoCreateService extends AbstractService<Oncologo, 
 		assert object != null;
 
 		// Desvinculamos el tratamiento para enviarlo a la vista
-		final Tuple tuple = super.unbind(object, "tipoTratamiento", "estadoTratamiento", "urgencia");
+		final Tuple tuple = super.unbind(object, "tipoTratamiento", "estadoTratamiento", "urgencia", "fechaInclusion");
+
+		tuple.put("fechaInclusion", object.getFechaInclusion());
 
 		tuple.put("nuhsa", object.getPaciente().getNuhsa());
 		tuple.put("name", object.getPaciente().getName());
