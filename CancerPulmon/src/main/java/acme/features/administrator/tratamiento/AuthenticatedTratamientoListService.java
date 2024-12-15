@@ -46,7 +46,7 @@ public class AuthenticatedTratamientoListService extends AbstractService<Adminis
 
 		Tuple tuple;
 
-		tuple = super.unbind(object, "tipoTratamiento", "estadoTratamiento");
+		tuple = super.unbind(object, "tipoTratamiento", "estadoTratamiento", "fechaInclusion", "urgencia");
 
 		if (object.getPaciente() != null)
 			tuple.put("nuhsa", object.getPaciente().getNuhsa());

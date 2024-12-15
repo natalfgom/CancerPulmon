@@ -39,4 +39,5 @@ public interface AuthenticatedTratamientoRepository extends AbstractRepository {
 	// Consulta para obtener los donantes compatibles según el grupo sanguíneo
 	@Query("SELECT d FROM Donante d WHERE d.grupoSanguineo = :grupoSanguineo")
 	List<Donante> findDonantesByGrupoSanguineo(String grupoSanguineo);
+
 }
