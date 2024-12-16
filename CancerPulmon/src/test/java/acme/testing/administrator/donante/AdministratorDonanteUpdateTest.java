@@ -1,6 +1,7 @@
 
 package acme.testing.administrator.donante;
 
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 
@@ -74,6 +75,24 @@ public class AdministratorDonanteUpdateTest extends TestHarness {
 
 		super.checkErrorsExist();
 
+		super.signOut();
+	}
+
+	@Test
+	public void test300Hacking() {
+		// HINT: this test tries to update a job with a role other than "Employer",
+		// HINT+ or using an employer who is not the owner.
+
+		String param;
+		param = String.format("id=%d", 53);
+		super.signIn("oncologo1", "oncologo1");
+		super.request("/administrator/donante/update", "53");
+		super.checkPanicExists();
+		super.signOut();
+
+		super.signIn("paciente1", "paciente1");
+		super.request("/administrator/donante/update", "53");
+		super.checkPanicExists();
 		super.signOut();
 	}
 
