@@ -6,7 +6,7 @@ import org.junit.jupiter.params.provider.CsvFileSource;
 
 import acme.testing.TestHarness;
 
-public class OncologoTrtamientoEditDeleteTest extends TestHarness {
+public class OncologoTrtamientoEditTest extends TestHarness {
 
 	@ParameterizedTest
 	@CsvFileSource(resources = "/oncologo/positive-update-tratamiento.csv", encoding = "utf-8", numLinesToSkip = 1)
@@ -41,6 +41,30 @@ public class OncologoTrtamientoEditDeleteTest extends TestHarness {
 		super.checkInputBoxHasValue("urgencia", urgencia);
 
 		super.signOut();
+	}
+
+	@ParameterizedTest
+	@CsvFileSource(resources = "/oncologo/negative-update-tratamiento.csv", encoding = "utf-8", numLinesToSkip = 1)
+	public void test200Negative(final int recordIndex, final String key, final String tipoTratamiento, final String estadoTratamiento, final String urgencia, final String paciente, final String fechaInclusion) {
+		// HINT: this test attempts to update a job with wrong data.
+
+		super.signIn("oncologo1", "oncologo1");
+
+		super.clickOnMenu("Treatments", "Edit Treatments");
+		super.checkListingExists();
+		super.sortListing(0, "asc");
+
+		super.clickOnListingRecord(recordIndex);
+		super.checkFormExists();
+		super.fillInputBoxIn("tipoTratamiento", tipoTratamiento);
+		super.fillInputBoxIn("estadoTratamiento", estadoTratamiento);
+		super.fillInputBoxIn("urgencia", urgencia);
+		super.clickOnSubmit("Save Changes");
+
+		super.checkErrorsExist();
+
+		super.signOut();
+
 	}
 
 }
