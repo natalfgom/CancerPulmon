@@ -12,6 +12,8 @@
     <acme:input-textarea code="administrator.paciente.form.label.genero" path="genero"/>
     <acme:input-textbox code="administrator.paciente.form.label.grupoSanguineo" path="grupoSanguineo"/>
     <acme:input-moment code="administrator.paciente.form.label.fechaNacimiento" path="fechaNacimiento"/>
+    <acme:input-moment code="administrator.paciente.form.label.afectado" path="afectado"/>
+    
 
     <jstl:choose>
     <jstl:when test="${acme:anyOf(_command, 'show|update|delete')}">

@@ -21,3 +21,4 @@ creardonante = Create Treatment
 
 authenticated.tratamiento.form.label.fecha = Inclusion Date
 authenticated.tratamiento.list.label.FECHA = Inclusion Date
+authenticated.tratamiento.form.label.paciente.afectado = Affected Part

@@ -80,6 +80,7 @@ public class OncologoTratamientoShowService extends AbstractService<Oncologo, Tr
 		tuple.put("genero", object.getPaciente().getGenero());
 		tuple.put("fechaNacimiento", object.getPaciente().getFechaNacimiento());
 		tuple.put("grupoSanguineo", object.getPaciente().getGrupoSanguineo());
+		tuple.put("afectado", object.getPaciente().getAfectado());
 
 		super.getResponse().setData(tuple);
 	}

@@ -11,3 +11,5 @@ administrator.paciente.form.label.fechaNacimiento = Birth Date
 
 administrator.paciente.form.button.update = Edit
 administrator.paciente.form.button.delete = Delete
+
+administrator.paciente.form.label.afectado = Affected Part

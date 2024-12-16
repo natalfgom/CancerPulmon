@@ -11,3 +11,5 @@ administrator.paciente.form.label.fechaNacimiento = Fecha Nacimiento
 
 administrator.paciente.form.button.update = Editar Paciente
 administrator.paciente.form.button.delete = Eliminar Paciente
+
+administrator.paciente.form.label.afectado = Zona Afectada

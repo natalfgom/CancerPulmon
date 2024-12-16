@@ -57,7 +57,7 @@ public class AdmnistratorPacienteUpdateService extends AbstractService<Administr
 	public void bind(final Paciente object) {
 		assert object != null;
 
-		super.bind(object, "nuhsa", "name", "surname", "genero", "grupoSanguineo", "fechaNacimiento");
+		super.bind(object, "nuhsa", "name", "surname", "genero", "grupoSanguineo", "fechaNacimiento", "afectado");
 	}
 
 	@Override
@@ -78,7 +78,7 @@ public class AdmnistratorPacienteUpdateService extends AbstractService<Administr
 
 		Tuple tuple;
 
-		tuple = super.unbind(object, "nuhsa", "name", "surname", "genero", "grupoSanguineo", "fechaNacimiento");
+		tuple = super.unbind(object, "nuhsa", "name", "surname", "genero", "grupoSanguineo", "fechaNacimiento", "afectado");
 
 		super.getResponse().setData(tuple);
 	}

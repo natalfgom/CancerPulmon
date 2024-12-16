@@ -57,7 +57,7 @@ public class AdministratorPacienteShowService extends AbstractService<Administra
 
 		Tuple tuple;
 
-		tuple = super.unbind(object, "nuhsa", "name", "surname", "genero", "grupoSanguineo", "fechaNacimiento");
+		tuple = super.unbind(object, "nuhsa", "name", "surname", "genero", "grupoSanguineo", "fechaNacimiento", "afectado");
 
 		super.getResponse().setData(tuple);
 	}

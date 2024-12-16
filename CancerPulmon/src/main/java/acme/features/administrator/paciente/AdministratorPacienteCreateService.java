@@ -22,7 +22,7 @@ public class AdministratorPacienteCreateService extends AbstractService<Administ
 
 	@Override
 	public void authorise() {
-		super.getResponse().setAuthorised(true);  // El administrador puede crear un paciente
+		super.getResponse().setAuthorised(true);
 	}
 
 	@Override
@@ -39,7 +39,7 @@ public class AdministratorPacienteCreateService extends AbstractService<Administ
 	@Override
 	public void bind(final Paciente paciente) {
 		assert paciente != null;
-		super.bind(paciente, "nuhsa", "name", "surname", "genero", "fechaNacimiento", "grupoSanguineo", "userAccount");
+		super.bind(paciente, "nuhsa", "name", "surname", "genero", "fechaNacimiento", "grupoSanguineo", "afectado", "userAccount");
 	}
 
 	@Override
@@ -57,6 +57,6 @@ public class AdministratorPacienteCreateService extends AbstractService<Administ
 
 	@Override
 	public void unbind(final Paciente paciente) {
-		super.getResponse().setData(super.unbind(paciente, "nuhsa", "name", "surname", "genero", "fechaNacimiento", "grupoSanguineo", "userAccount"));
+		super.getResponse().setData(super.unbind(paciente, "nuhsa", "name", "surname", "genero", "fechaNacimiento", "grupoSanguineo", "afectado", "userAccount"));
 	}
 }

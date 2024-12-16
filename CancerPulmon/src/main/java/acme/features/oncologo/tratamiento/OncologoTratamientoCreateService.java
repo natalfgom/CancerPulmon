@@ -98,6 +98,7 @@ public class OncologoTratamientoCreateService extends AbstractService<Oncologo, 
 		tuple.put("genero", object.getPaciente().getGenero());
 		tuple.put("fechaNacimiento", object.getPaciente().getFechaNacimiento());
 		tuple.put("grupoSanguineo", object.getPaciente().getGrupoSanguineo());
+		tuple.put("afectado", object.getPaciente().getAfectado());
 
 		// Pasamos el ID del paciente al modelo para la vista
 		tuple.put("pacienteId", object.getPaciente().getId());

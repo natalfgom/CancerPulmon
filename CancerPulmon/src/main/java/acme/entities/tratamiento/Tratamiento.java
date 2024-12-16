@@ -37,7 +37,6 @@ public class Tratamiento extends AbstractEntity {
 	protected EstadoTratamiento	estadoTratamiento; // Enum: EN_CURSO, FINALIZADO, PENDIENTE
 
 	@Enumerated(EnumType.STRING)
-
 	protected Urgencia			urgencia; //Alta, Baja o media
 
 	@NotNull

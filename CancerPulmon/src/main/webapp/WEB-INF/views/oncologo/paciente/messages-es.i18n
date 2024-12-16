@@ -5,4 +5,6 @@ authenticated.paciente.form.label.fechanacimiento = Fecha Nacimiente
 authenticated.paciente.form.label.genero = Genero
 authenticated.paciente.form.label.gruposanguineo = Grupo Sanguineo
 
+administrator.paciente.form.label.afectado = Zona afectada
+
 oncologo.tto = Añadir tratamiento

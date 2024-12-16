@@ -57,7 +57,7 @@ public class OncologoPacienteShowService extends AbstractService<Oncologo, Pacie
 
 		Tuple tuple;
 
-		tuple = super.unbind(object, "nuhsa", "name", "surname", "genero", "grupoSanguineo", "fechaNacimiento");
+		tuple = super.unbind(object, "nuhsa", "name", "surname", "genero", "grupoSanguineo", "fechaNacimiento", "afectado");
 
 		// Pasamos el ID del paciente al modelo para la vista
 		tuple.put("pacienteId", object.getId());

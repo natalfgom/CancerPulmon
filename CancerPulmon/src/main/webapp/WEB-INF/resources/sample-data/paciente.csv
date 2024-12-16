@@ -1,21 +1,21 @@
-key,key:userAccount,nuhsa,name,surname,genero,GrupoSanguineo,fechaNacimiento
-paciente-01,user-account-paciente-01,11223-M,Lucia,Brenes,Femenino,A_POSITIVO,1995/03/11 00:00
-paciente-02,user-account-paciente-02,11224-M,Maria,Gomez,Femenino,B_POSITIVO,1996/02/05 00:00
-paciente-03,user-account-paciente-03,11225-M,Juan,Martinez,Masculino,O_POSITIVO,1997/07/15 00:00
-paciente-04,user-account-paciente-04,11226-M,Pedro,Lopez,Masculino,A_NEGATIVO,1994/01/12 00:00
-paciente-05,user-account-paciente-05,11227-M,Ana,Perez,Femenino,AB_POSITIVO,1993/10/09 00:00
-paciente-06,user-account-paciente-06,11228-M,Carlos,Ramirez,Masculino,O_NEGATIVO,1991/08/19 00:00
-paciente-07,user-account-paciente-07,11229-M,Laura,Diaz,Femenino,B_NEGATIVO,1992/11/23 00:00
-paciente-08,user-account-paciente-08,11230-M,Javier,Hernandez,Masculino,A_POSITIVO,1990/06/30 00:00
-paciente-09,user-account-paciente-09,11231-M,Beatriz,Gonzalez,Femenino,B_POSITIVO,1995/05/18 00:00
-paciente-10,user-account-paciente-10,11232-M,David,Sanchez,Masculino,O_POSITIVO,1994/02/21 00:00
-paciente-11,user-account-paciente-11,11233-M,María,Lopez,Femenino,AB_POSITIVO,1997/09/10 00:00
-paciente-12,user-account-paciente-12,11234-M,Ricardo,Molina,Masculino,A_NEGATIVO,1996/04/16 00:00
-paciente-13,user-account-paciente-13,11235-M,Elena,Fernandez,Femenino,O_NEGATIVO,1993/12/02 00:00
-paciente-14,user-account-paciente-14,11236-M,Antonio,Martinez,Masculino,A_POSITIVO,1992/01/28 00:00
-paciente-15,user-account-paciente-15,11237-M,Sofia,Alvarez,Femenino,B_POSITIVO,1991/03/15 00:00
-paciente-16,user-account-paciente-16,11238-M,Raul,Gomez,Masculino,O_POSITIVO,1994/09/03 00:00
-paciente-17,user-account-paciente-17,11239-M,Isabel,Romero,Femenino,A_NEGATIVO,1995/07/27 00:00
-paciente-18,user-account-paciente-18,11240-M,Rafael,Castro,Masculino,B_NEGATIVO,1993/06/19 00:00
-paciente-19,user-account-paciente-19,11241-M,Marta,Vazquez,Femenino,AB_POSITIVO,1992/11/12 00:00
-paciente-20,user-account-paciente-20,11242-M,Ricardo,Rodriguez,Masculino,A_POSITIVO,1991/04/04 00:00
+key,key:userAccount,nuhsa,name,surname,genero,GrupoSanguineo,fechaNacimiento,afectado
+paciente-01,user-account-paciente-01,11223-M,Lucia,Brenes,Femenino,A_POSITIVO,1995/03/11 00:00,Lobulo_pulmonar
+paciente-02,user-account-paciente-02,11224-M,Maria,Gomez,Femenino,B_POSITIVO,1996/02/05 00:00,Lobulo_pulmonar
+paciente-03,user-account-paciente-03,11225-M,Juan,Martinez,Masculino,O_POSITIVO,1997/07/15 00:00,Lobulo_pulmonar
+paciente-04,user-account-paciente-04,11226-M,Pedro,Lopez,Masculino,A_NEGATIVO,1994/01/12 00:00,Lobulo_pulmonar
+paciente-05,user-account-paciente-05,11227-M,Ana,Perez,Femenino,AB_POSITIVO,1993/10/09 00:00,Lobulo_pulmonar
+paciente-06,user-account-paciente-06,11228-M,Carlos,Ramirez,Masculino,O_NEGATIVO,1991/08/19 00:00,Lobulo_pulmonar
+paciente-07,user-account-paciente-07,11229-M,Laura,Diaz,Femenino,B_NEGATIVO,1992/11/23 00:00,Pulmon_completo_izquierdo
+paciente-08,user-account-paciente-08,11230-M,Javier,Hernandez,Masculino,A_POSITIVO,1990/06/30 00:00,Pulmon_completo_izquierdo
+paciente-09,user-account-paciente-09,11231-M,Beatriz,Gonzalez,Femenino,B_POSITIVO,1995/05/18 00:00,Pulmon_completo_izquierdo
+paciente-10,user-account-paciente-10,11232-M,David,Sanchez,Masculino,O_POSITIVO,1994/02/21 00:00,Pulmon_completo_izquierdo
+paciente-11,user-account-paciente-11,11233-M,María,Lopez,Femenino,AB_POSITIVO,1997/09/10 00:00,Pulmon_completo_izquierdo
+paciente-12,user-account-paciente-12,11234-M,Ricardo,Molina,Masculino,A_NEGATIVO,1996/04/16 00:00,Pulmon_completo_izquierdo
+paciente-13,user-account-paciente-13,11235-M,Elena,Fernandez,Femenino,O_NEGATIVO,1993/12/02 00:00,Pulmon_completo_izquierdo
+paciente-14,user-account-paciente-14,11236-M,Antonio,Martinez,Masculino,A_POSITIVO,1992/01/28 00:00,Pulmon_completo_derecho
+paciente-15,user-account-paciente-15,11237-M,Sofia,Alvarez,Femenino,B_POSITIVO,1991/03/15 00:00,Pulmon_completo_derecho
+paciente-16,user-account-paciente-16,11238-M,Raul,Gomez,Masculino,O_POSITIVO,1994/09/03 00:00,Pulmon_completo_derecho
+paciente-17,user-account-paciente-17,11239-M,Isabel,Romero,Femenino,A_NEGATIVO,1995/07/27 00:00,Pulmon_completo_derecho
+paciente-18,user-account-paciente-18,11240-M,Rafael,Castro,Masculino,B_NEGATIVO,1993/06/19 00:00,Pulmon_completo_derecho
+paciente-19,user-account-paciente-19,11241-M,Marta,Vazquez,Femenino,AB_POSITIVO,1992/11/12 00:00,Pulmon_completo_derecho
+paciente-20,user-account-paciente-20,11242-M,Ricardo,Rodriguez,Masculino,A_POSITIVO,1991/04/04 00:00, Pulmon_completo_derecho

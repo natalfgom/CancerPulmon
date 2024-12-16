@@ -23,7 +23,7 @@ public interface AdministratorPacienteRepository extends AbstractRepository {
 	@Query("select p from Paciente p where p.nuhsa = :nuhsa")
 	Optional<Paciente> findOnePacienteByNuhsa(String nuhsa);
 
-	// Buscar todos los pacientes (si es necesario)
+	// Buscar todos los pacientes
 	@Query("select p from Paciente p")
 	Collection<Paciente> findAllPacientes();
 

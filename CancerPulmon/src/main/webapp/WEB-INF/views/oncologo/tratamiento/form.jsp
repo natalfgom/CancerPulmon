@@ -16,6 +16,7 @@
     <acme:input-textbox code="authenticated.tratamiento.form.label.paciente.genero" path="genero" readonly="true" />
     <acme:input-textbox code="authenticated.tratamiento.form.label.paciente.fechaNacimiento" path="fechaNacimiento" readonly="true"/>
     <acme:input-textbox code="authenticated.tratamiento.form.label.paciente.grupoSanguineo" path="grupoSanguineo" readonly="true"/>
+    <acme:input-textbox code="authenticated.tratamiento.form.label.paciente.afectado" path="afectado" readonly="true"/>
 
     <jstl:choose>
         <jstl:when test="${acme:anyOf(_command, 'show|update|delete')}">

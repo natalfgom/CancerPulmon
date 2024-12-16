@@ -20,3 +20,4 @@ creardonante = Crear tratemiento
 
 authenticated.tratamiento.list.label.FECHA = Fecha de inclusión
 authenticated.tratamiento.form.label.fecha = Inclusion Date
+authenticated.tratamiento.form.label.paciente.afectado = Zona afectada

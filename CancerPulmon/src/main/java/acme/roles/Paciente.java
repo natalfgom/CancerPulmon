@@ -4,9 +4,12 @@ package acme.roles;
 import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
+import acme.entities.donante.OrganoDisponible;
 import acme.framework.data.AbstractRole;
 import lombok.Getter;
 import lombok.Setter;
@@ -39,5 +42,9 @@ public class Paciente extends AbstractRole {
 
 	@NotNull
 	protected Date				fechaNacimiento;
+
+	@NotNull
+	@Enumerated(EnumType.STRING)
+	protected OrganoDisponible	afectado;  // Enum: PULMON_COMPLETO_IZQUIERDO, PULMON_COMPLETO_DERECHO, LOBULO_PULMONAR
 
 }

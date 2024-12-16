@@ -42,17 +42,6 @@ public class AuthenticatedTratamientoShowService extends AbstractService<Adminis
 		super.getResponse().setAuthorised(status);
 	}
 
-	//@Override
-	//public void load() {
-	//Tratamiento object;
-	//int id;
-
-	//id = super.getRequest().getData("id", int.class);
-	//object = this.repository.findOneTratamientotById(id);
-
-	//super.getBuffer().setData(object);
-	//}
-
 	@Override
 	public void load() {
 		Tratamiento object;

@@ -9,6 +9,7 @@
     <acme:input-url code="authenticated.paciente.form.label.genero" path="genero"/>
     <acme:input-url code="authenticated.paciente.form.label.fechanacimiento" path="fechaNacimiento"/>
     <acme:input-url code="authenticated.paciente.form.label.gruposanguineo" path="grupoSanguineo"/>
+     <acme:input-moment code="administrator.paciente.form.label.afectado" path="afectado"/>
 
 <%--    <acme:submit  --%>
 <%--     code="tratamiento"  --%>
