@@ -18,8 +18,7 @@ public class OncologoTrtamientoShowTest extends TestHarness {
 		super.signIn("oncologo1", "oncologo1");
 
 		super.clickOnMenu("Treatments", "Edit Treatments");
-		super.checkListingExists();  // Verifica que la lista de pacientes existe
-
+		super.checkListingExists();
 		super.sortListing(0, "asc");
 		super.clickOnListingRecord(recordIndex);
 		super.checkFormExists();
