@@ -1,12 +1,21 @@
 
 package acme.testing.Oncologo.Tratamiento;
 
+import java.util.Collection;
+
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
+import org.springframework.beans.factory.annotation.Autowired;
 
+import acme.entities.tratamiento.Tratamiento;
 import acme.testing.TestHarness;
 
 public class OncologoTrtamientoShowTest extends TestHarness {
+
+	@Autowired
+	protected OncologoTratamientoRepository2 repository;
+
 
 	@ParameterizedTest
 	@CsvFileSource(resources = "/oncologo/positive-show-tratamiento.csv", encoding = "utf-8", numLinesToSkip = 1)
@@ -29,6 +38,22 @@ public class OncologoTrtamientoShowTest extends TestHarness {
 		super.checkInputBoxHasValue("fechaInclusion", fechaInclusion);
 
 		// Cierra la sesión
+		super.signOut();
+	}
+
+	@Test
+	public void test300Hacking() {
+
+		final Collection<Tratamiento> tratamientos = this.repository.findTratamientos();
+
+		super.signIn("paciente1", "paciente1");
+
+		for (final Tratamiento tratamiento : tratamientos) {
+			final String param = String.format("id=%d", tratamiento.getId());
+			super.request("/oncologo/tratamiento/list", param);
+			super.checkPanicExists();
+		}
+
 		super.signOut();
 	}
 

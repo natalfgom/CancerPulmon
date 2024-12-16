@@ -19,9 +19,9 @@ public interface OncologoTratamientoRepository extends AbstractRepository {
 	@Query("select a from Tratamiento a where a.id = :id")
 	Tratamiento findOneTratamientotById(int id);
 
-	//Método para listar tratamientos
-	//@Query("select t from Tratamiento t")
-	//List<Tratamiento> findTratamientos();
+	//	Método para listar tratamientos
+	//	@Query("select t from Tratamiento t")
+	//	List<Tratamiento> findTratamientos();
 
 	@Query("SELECT t FROM Tratamiento t JOIN FETCH t.paciente p")
 	Collection<Tratamiento> findAllTratamientosWithPaciente();
