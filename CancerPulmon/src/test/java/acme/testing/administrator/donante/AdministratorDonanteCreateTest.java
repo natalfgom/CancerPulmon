@@ -7,24 +7,16 @@ import org.junit.jupiter.params.provider.CsvFileSource;
 
 import acme.testing.TestHarness;
 
-public class AdministratorDonanteUpdateTest extends TestHarness {
+public class AdministratorDonanteCreateTest extends TestHarness {
 
 	@ParameterizedTest
-	@CsvFileSource(resources = "/administrator/donante-update-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@CsvFileSource(resources = "/administrator/donante-create-positive2.csv", encoding = "utf-8", numLinesToSkip = 1)
 	public void test100Positive(final int recordIndex, final String nhusa, final String nombre, final String apellidos, final String grupoSanguineo, final String organoDisponible, final String volumenPulmonar, final String fechaExtraccion) {
 		super.signIn("administrator", "administrator");
 
 		// Navegar al menú de donantes disponibles
-		super.clickOnMenu("Donors", "Available Donors");
-		super.checkListingExists();
+		super.clickOnMenu("Donors", "Create Donor");
 
-		super.sortListing(0, "asc");
-
-		// Acceder al registro específico
-		super.clickOnListingRecord(recordIndex);
-		super.checkFormExists();
-
-		// Actualizar campos
 		super.fillInputBoxIn("nhusa", nhusa);
 		super.fillInputBoxIn("nombre", nombre);
 		super.fillInputBoxIn("apellidos", apellidos);
@@ -32,15 +24,19 @@ public class AdministratorDonanteUpdateTest extends TestHarness {
 		super.fillInputBoxIn("organoDisponible", organoDisponible);
 		super.fillInputBoxIn("volumenPulmonar", volumenPulmonar);
 		super.fillInputBoxIn("fechaExtraccion", fechaExtraccion);
-		super.clickOnSubmit("Save changes");
+		super.clickOnSubmit("Create Donor");
 
-		// Verificar cambios en el listado
+		super.clickOnMenu("Donors", "Available Donors");
 		super.checkListingExists();
 		super.sortListing(0, "asc");
-		super.clickOnListingRecord(recordIndex);
 
-		// Verificar valores actualizados
+		super.checkColumnHasValue(recordIndex, 0, nhusa);
+		super.checkColumnHasValue(recordIndex, 1, nombre);
+		super.checkColumnHasValue(recordIndex, 2, apellidos);
+
+		super.clickOnListingRecord(recordIndex);
 		super.checkFormExists();
+		// Verificar valores actualizados
 		super.checkInputBoxHasValue("nhusa", nhusa);
 		super.checkInputBoxHasValue("nombre", nombre);
 		super.checkInputBoxHasValue("apellidos", apellidos);
@@ -53,16 +49,13 @@ public class AdministratorDonanteUpdateTest extends TestHarness {
 	}
 
 	@ParameterizedTest
-	@CsvFileSource(resources = "/administrator/donante-update-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@CsvFileSource(resources = "/administrator/donante-create-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
 	public void test200Negative(final int recordIndex, final String nhusa, final String nombre, final String apellidos, final String grupoSanguineo, final String organoDisponible, final String volumenPulmonar, final String fechaExtraccion) {
 		super.signIn("administrator", "administrator");
 
-		super.clickOnMenu("Donors", "Available Donors");
-		super.checkListingExists();
-		super.sortListing(0, "asc");
+		// Navegar al menú de donantes disponibles
+		super.clickOnMenu("Donors", "Create Donor");
 
-		super.clickOnListingRecord(recordIndex);
-		super.checkFormExists();
 		super.fillInputBoxIn("nhusa", nhusa);
 		super.fillInputBoxIn("nombre", nombre);
 		super.fillInputBoxIn("apellidos", apellidos);
@@ -70,7 +63,7 @@ public class AdministratorDonanteUpdateTest extends TestHarness {
 		super.fillInputBoxIn("organoDisponible", organoDisponible);
 		super.fillInputBoxIn("volumenPulmonar", volumenPulmonar);
 		super.fillInputBoxIn("fechaExtraccion", fechaExtraccion);
-		super.clickOnSubmit("Save changes");
+		super.clickOnSubmit("Create Donor");
 
 		super.checkErrorsExist();
 
@@ -79,18 +72,21 @@ public class AdministratorDonanteUpdateTest extends TestHarness {
 
 	@Test
 	public void test300Hacking() {
+		// HINT: this test tries to create a job using principals with
+		// HINT+ inappropriate roles.
 
-		String param;
-		param = String.format("id=%d", 53);
+		super.checkLinkExists("Sign in");
+		super.request("/employer/job/create");
+		super.checkPanicExists();
+
 		super.signIn("oncologo1", "oncologo1");
-		super.request("/administrator/donante/update", param);
+		super.request("/administrator/donante/create");
 		super.checkPanicExists();
 		super.signOut();
 
 		super.signIn("paciente1", "paciente1");
-		super.request("/administrator/donante/update", param);
+		super.request("/administrator/donante/create");
 		super.checkPanicExists();
 		super.signOut();
 	}
-
 }
